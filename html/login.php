@@ -4,8 +4,11 @@ session_start();
 $error=''; 
 
 if (isset($_POST['submit'])) {
+
+
   if (empty($_POST['username']) || empty($_POST['password'])) {
     $error = "Username or Password is invalid";
+     
   }
   else
   {
@@ -27,25 +30,34 @@ if (isset($_POST['submit'])) {
     $dbusername = $db['user'];
     $dbpassword = $db['passwd'];
     $dbtype = $db['type'];
+    $sec_passwd  = $db['sec_passwd'];
 
-    try {
-        $conn = new PDO("$dbtype:host=$dbservername;dbname=$dbname", $dbusername, $dbpassword);
-        // set the PDO error mode to exception
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "Connected successfully"; 
-	$sql = "INSERT INTO answers (user_id, start_time)
-		        VALUES ('" . $username . "', '" . $starttime . "')";
-	// use exec() because no results are returned
-	$conn->exec($sql);
-	echo "New record created successfully<br>";
-
-	// Close database connection
-	$conn = null;
-
+      
+    // Secure password only check
+    if ($sec_passwd != $password) {
+	$_SESSION['username'] = NULL;
+        $error = "Username or Password is invalid";
     }
-    catch(PDOException $e)
-    {
-        echo "Connection failed: " . $e->getMessage();
+    else {
+        try {
+            $conn = new PDO("$dbtype:host=$dbservername;dbname=$dbname", $dbusername, $dbpassword);
+            // set the PDO error mode to exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            echo "Connected successfully"; 
+            $sql = "INSERT INTO answers (user_id, start_time)
+		        VALUES ('" . $username . "', '" . $starttime . "')";
+	    // use exec() because no results are returned
+            $conn->exec($sql);
+	    echo "New record created successfully<br>";
+
+	    // Close database connection
+	    $conn = null;
+
+        }
+        catch(PDOException $e)
+        {
+            echo "Connection failed: " . $e->getMessage();
+        }
     }
 
     // mysql_close($connection);
