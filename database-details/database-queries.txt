@@ -1,0 +1,219 @@
+
+
+-- set to database
+use resetdb;
+
+DROP TABLE answers;
+
+-- create table to store answers from a session
+CREATE TABLE answers (
+ user_id VARCHAR(100) NOT NULL,
+ start_time DATETIME NOT NULL,
+ question1 VARCHAR(10) NOT NULL,
+ question2 VARCHAR(10) NOT NULL,
+ question3 VARCHAR(10) NOT NULL,
+ question4 VARCHAR(10) NOT NULL,
+ question5 VARCHAR(10) NOT NULL,
+ question6 VARCHAR(10) NOT NULL,
+ question7 VARCHAR(10) NOT NULL,
+ question8 VARCHAR(10) NOT NULL,
+ question9 VARCHAR(10) NOT NULL,
+ question10 VARCHAR(10) NOT NULL,
+ question11 VARCHAR(10) NOT NULL,
+ question12 VARCHAR(10) NOT NULL,
+ question13 VARCHAR(10) NOT NULL,
+ question14 VARCHAR(10) NOT NULL,
+ question15 VARCHAR(10) NOT NULL,
+ question16 VARCHAR(10) NOT NULL,
+ question17 VARCHAR(10) NOT NULL,
+ question18 VARCHAR(10) NOT NULL,
+ question19 VARCHAR(10) NOT NULL,
+ question20 VARCHAR(10) NOT NULL,
+ question21 VARCHAR(10) NOT NULL,
+ question22 VARCHAR(10) NOT NULL,
+ question23 VARCHAR(10) NOT NULL,
+ question24 VARCHAR(10) NOT NULL,
+ question25 VARCHAR(10) NOT NULL,
+ question26 VARCHAR(10) NOT NULL,
+ question27 VARCHAR(10) NOT NULL,
+ question28 VARCHAR(10) NOT NULL,
+ question29 VARCHAR(10) NOT NULL,
+ question30 VARCHAR(10) NOT NULL,
+ question31 VARCHAR(10) NOT NULL,
+ question32 VARCHAR(10) NOT NULL,
+ question33 VARCHAR(10) NOT NULL,
+ question34 VARCHAR(10) NOT NULL,
+ question35 VARCHAR(10) NOT NULL,
+ question36 VARCHAR(10) NOT NULL,
+ question37 VARCHAR(10) NOT NULL,
+ question38 VARCHAR(10) NOT NULL,
+ question39 VARCHAR(10) NOT NULL,
+ question40 VARCHAR(10) NOT NULL,
+ question41 VARCHAR(10) NOT NULL,
+ question42 VARCHAR(10) NOT NULL,
+ question43 VARCHAR(10) NOT NULL,
+ question44 VARCHAR(10) NOT NULL,
+ question45 VARCHAR(10) NOT NULL,
+ question46 VARCHAR(10) NOT NULL,
+ question47 VARCHAR(10) NOT NULL,
+ question48 VARCHAR(10) NOT NULL,
+ question49 VARCHAR(10) NOT NULL,
+ question50 VARCHAR(10) NOT NULL,
+ question51 VARCHAR(10) NOT NULL,
+ question52 VARCHAR(10) NOT NULL,
+ question53 VARCHAR(10) NOT NULL,
+ question54 VARCHAR(10) NOT NULL,
+ question55 VARCHAR(10) NOT NULL,
+ question56 VARCHAR(10) NOT NULL,
+ question57 VARCHAR(10) NOT NULL,
+ question58 VARCHAR(10) NOT NULL,
+ question59 VARCHAR(10) NOT NULL,
+ question60 VARCHAR(10) NOT NULL
+ );
+
+
+
+SHOW TABLES;
+
+--  create table to allocate points 'scored' fort each question
+create table POINTS (
+Q_num integer NOT NULL,
+answer_0 VARCHAR(10),
+answer_1 VARCHAR(10),
+answer_2 VARCHAR(10),
+answer_3 VARCHAR(10)
+);
+
+
+INSERT INTO POINTS(
+Q_num,answer_0,answer_1,answer_2,answer_3)
+VALUES("6",NULL,"S1",NULL,NULL);
+
+INSERT INTO POINTS(
+Q_num,answer_0,answer_1,answer_2,answer_3)
+VALUES("8",NULL,"S1",NULL,NULL);
+
+INSERT INTO POINTS(
+Q_num,answer_0,answer_1,answer_2,answer_3)
+VALUES("9",NULL,"D1","PD1",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("10",NULL,"D1","S1",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("11",NULL,"S1","S1",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("13","D1","A1",NULL,NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("14",NULL,"A1","S1",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("15","S1",NULL,"S1",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("21",NULL,"D1","S1",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("22",NULL,"PD1","A1",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("23","A1",NULL,"D1",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("24",NULL,"D1","D1",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("25","PD1","A1","D1",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("26",NULL,"D1","D2",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("27",NULL,"D1","D2",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("28",NULL,"A1","A2",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("29",NULL,"D1","D2",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("30",NULL,"D1","D2",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("31",NULL,"A1","A2",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("32",NULL,"A1","A2",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("33",NULL,"A1","A2",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("34",NULL,"A1","A2",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("35",NULL,"D1","D2",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("36",NULL,"A1","A2",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("37",NULL,"A1","A2",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("38",NULL,"S1","S2",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("39",NULL,"S1","S2",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("40",NULL,"S1","S2",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("41",NULL,"S1","S2",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("42",NULL,"S1","S2",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("43",NULL,"S1","S2",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("44",NULL,"S1","S2",NULL);
+
+INSERT INTO POINTS(
+Q_NUM,answer_0,answer_1,answer_2,answer_3)
+VALUES("45",NULL,"S1","S2",NULL);
+ 
