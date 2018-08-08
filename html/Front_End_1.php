@@ -79,9 +79,9 @@ input[type=submit]:hover {
 
 <h2>Mental Health Questionaire</h2>
 <p>Fill in the following questionaire in order to help us to asses your mental state</p>
-<?php
-    print_r($_SESSION);
-?>
+
+
+
 <div class="container">
   <form action="#" method="post">
     <div class="row">
@@ -92,6 +92,10 @@ input[type=submit]:hover {
         <select id="quest1" name="q1">
           <option value="0">YES</option>
           <option value="1">NO</option>
+          <!--
+          <option value="0" <?= ($_POST['q1'] == "0")? "selected":"";?>>YES</option>
+          <option value="1" <?= ($_POST['q1'] == "1")? "selected":"";?>>NO</option>
+          -->
         </select>
       </div>
     </div>
@@ -112,9 +116,9 @@ input[type=submit]:hover {
        </div>
        <div class="col-75">
          <select id="quest3" name="q3"</label>
-           <option value="0">Happy</option>
-           <option value="1">Somehow Happy</option>
-           <option value="2">Not Happy</option>
+          <option value="0">Happy</option>
+          <option value="1">Somewhat happy</option>
+          <option value="2">Not happy</option>
          </select>
        </div>
       </div>
@@ -124,9 +128,9 @@ input[type=submit]:hover {
         </div>
         <div class="col-75">
           <select id="quest4" name="q4"</label>
-            <option value="0">Often</option>
-            <option value="1">Sometimes</option>
-            <option value="2">Rarely</option>
+          <option value="0">Often</option>
+          <option value="1">Sometimes</option>
+          <option value="2">Rarely</option>
           </select>
         </div>
        </div>
@@ -136,9 +140,9 @@ input[type=submit]:hover {
          </div>
          <div class="col-75">
            <select id="quest5" name="q5"</label>
-             <option value="0">Active</option>
-             <option value="1">Somehow Active</option>
-             <option value="2">NOT Active</option>
+          <option value="0">Active</option>
+          <option value="1">Somewhat active</option>
+          <option value="2">Not active</option>
            </select>
          </div>
         </div>
@@ -161,13 +165,26 @@ input[type=submit]:hover {
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if( $_POST["q1"] || $_POST["q2"] || $_POST["q3"] || $_POST["q4"] ||$_POST["q5"])
+
+
+    // Print POST variables
+    echo '<pre>'.print_r($_POST,true).'</pre>';
+
+    
+    if((isset($_POST["q1"])) &&
+       (isset($_POST["q2"])) &&
+       (isset($_POST["q3"])) &&
+       (isset($_POST["q4"])) &&
+       (isset($_POST["q5"])) )
     {
-    echo "q1: ". $_POST['q1']. "<br />";
-    echo "q2: ". $_POST['q2']. "<br />";
-    echo "q3: ". $_POST['q3']. "<br />";
-    echo "q4: ". $_POST['q4']. "<br />";
-    echo "q5: ". $_POST['q5']. "<br />";
+
+    //if( $_POST["q1"] && $_POST["q2"] && $_POST["q3"] && $_POST["q4"] && $_POST["q5"])
+    //{
+    //echo "q1: ". $_POST['q1']. "<br />";
+    //echo "q2: ". $_POST['q2']. "<br />";
+    //echo "q3: ". $_POST['q3']. "<br />";
+    //echo "q4: ". $_POST['q4']. "<br />";
+    //echo "q5: ". $_POST['q5']. "<br />";
 
     $q1 = $_POST['q1'];
     $q2 = $_POST['q2'];
@@ -199,7 +216,6 @@ input[type=submit]:hover {
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
 	// use exec() because no results are returned
-	print($sql);
 	$conn->exec($sql);
 
 	// Close database connection

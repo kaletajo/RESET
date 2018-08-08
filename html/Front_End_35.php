@@ -59,10 +59,10 @@ At times I am very sociable and other times I just want to be left alone
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest40">Does the above statement reflects how you feel</label>
+        <label for="quest39">Does the above statement reflects how you feel</label>
     </div>
       <div class="col-75">
-        <select id="quest40" name="q40">
+        <select id="quest39" name="q39">
           <option value="0">Not at all</option>
           <option value="1">A little</option>
           <option value="2">Quite a lot</option>
@@ -79,10 +79,9 @@ At times I am very sociable and other times I just want to be left alone
 
 !-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if( $_POST["q40"])
+    if (isset($_POST["q39"]))
     {
-    echo "q40: ". $_POST['q40']. "<br />";
-    $q40 = $_POST['q40'];
+    $q39 = $_POST['q39'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -100,11 +99,10 @@ At times I am very sociable and other times I just want to be left alone
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question40='" . $q40 . "', " 
+        $sql = "UPDATE answers SET question39='" . $q39 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
-        print($sql);
         $conn->exec($sql);
 
        // Close database connection

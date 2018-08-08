@@ -59,10 +59,10 @@ Do other people have a difficult time guessing your emotions by your facial expr
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest44">Select an answer</label>
+        <label for="quest43">Select an answer</label>
       </div>
       <div class="col-75">
-        <select id="quest44" name="q44">
+        <select id="quest43" name="q43">
           <option value="0">Never</option>
           <option value="1">Sometimes</option>
           <option value="2">Very often</option>
@@ -78,10 +78,9 @@ Do other people have a difficult time guessing your emotions by your facial expr
 
 !-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if( $_POST["q44"])
+    if (isset($_POST["q43"]))
     {
-    echo "q44: ". $_POST['q44']. "<br />";
-    $q44 = $_POST['q44'];
+    $q43 = $_POST['q43'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -99,11 +98,10 @@ Do other people have a difficult time guessing your emotions by your facial expr
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question44='" . $q44 . "', " 
+        $sql = "UPDATE answers SET question43='" . $q43 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
-        print($sql);
         $conn->exec($sql);
 
        // Close database connection

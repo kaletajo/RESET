@@ -59,10 +59,10 @@ I seem to be constantly worrying about things
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest35">How often do you feel as the person above?</label>
+        <label for="quest34">How often do you feel as the person above?</label>
       </div>
       <div class="col-75">
-        <select id="quest35" name="q35">
+        <select id="quest34" name="q34">
           <option value="0">Rarely</option>
           <option value="1">Sometimes</option>
           <option value="2">Often</option>
@@ -81,10 +81,9 @@ I seem to be constantly worrying about things
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if( $_POST["q35"])
+    if (isset($_POST["q34"]))
     {
-    echo "q35: ". $_POST['q35']. "<br />";
-    $q35 = $_POST['q35'];
+    $q34 = $_POST['q34'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -101,11 +100,10 @@ I seem to be constantly worrying about things
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question35='" . $q35 . "', " 
+        $sql = "UPDATE answers SET question34='" . $q34 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
-        print($sql);
         $conn->exec($sql);
 
        // Close database connection

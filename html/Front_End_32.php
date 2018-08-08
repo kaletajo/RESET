@@ -59,10 +59,10 @@ I have periods where I feel wired or hyper and I am really active
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest37">How often do you feel as described above?</label>
+        <label for="quest36">How often do you feel as described above?</label>
       </div>
       <div class="col-75">
-        <select id="quest37" name="q37">
+        <select id="quest36" name="q36">
           <option value="0">Not at all</option>
           <option value="1">A little</option>
           <option value="2">Quite a lot</option>
@@ -79,10 +79,9 @@ I have periods where I feel wired or hyper and I am really active
 
 !-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if( $_POST["q37"])
+    if (isset($_POST["q36"]))
     {
-    echo "q37: ". $_POST['q37']. "<br />";
-    $q37 = $_POST['q37'];
+    $q36 = $_POST['q36'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -99,11 +98,10 @@ I have periods where I feel wired or hyper and I am really active
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question37='" . $q37 . "', " 
+        $sql = "UPDATE answers SET question36='" . $q36 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
-        print($sql);
         $conn->exec($sql);
 
        // Close database connection

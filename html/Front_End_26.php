@@ -83,9 +83,8 @@ I find it very hard to unwind, relax or sit still
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if( $_POST["q30"])
+    if (isset($_POST["q30"]))
     {
-    echo "q30: ". $_POST['q30']. "<br />";
     $q30 = $_POST['q30'];
 
     // Read database config file and set-up db connection
@@ -103,11 +102,10 @@ I find it very hard to unwind, relax or sit still
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question30='" . $q30 . "', " 
+        $sql = "UPDATE answers SET question30='" . $q30 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
-        print($sql);
         $conn->exec($sql);
 
        // Close database connection

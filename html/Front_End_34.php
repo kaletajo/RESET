@@ -59,10 +59,10 @@ There are times where I have a lot more interest in sex than at other times.
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest39">How much do you relate to the statement above?</label>
+        <label for="quest38">How much do you relate to the statement above?</label>
       </div>
       <div class="col-75">
-        <select id="quest39" name="q39">
+        <select id="quest38" name="q38">
           <option value="0">Not at all</option>
           <option value="1">A little</option>
           <option value="2">Quite a lot</option>
@@ -78,10 +78,9 @@ There are times where I have a lot more interest in sex than at other times.
 
 !-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if( $_POST["q39"])
+    if (isset($_POST["q38"]))
     {
-    echo "q39: ". $_POST['q39']. "<br />";
-    $q39 = $_POST['q39'];
+    $q38 = $_POST['q38'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -99,11 +98,10 @@ There are times where I have a lot more interest in sex than at other times.
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question39='" . $q39 . "', " 
+        $sql = "UPDATE answers SET question38='" . $q38 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
-        print($sql);
         $conn->exec($sql);
 
        // Close database connection

@@ -58,10 +58,10 @@ Do you feel that you are being tracked, followed, or watched at home or outside?
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest45">Select an answer</label>
+        <label for="quest44">Select an answer</label>
       </div>
       <div class="col-75">
-        <select id="quest45" name="q45">
+        <select id="quest44" name="q44">
           <option value="0">Never</option>
           <option value="1">Sometimes</option>
           <option value="2">Very often</option>
@@ -78,10 +78,9 @@ Do you feel that you are being tracked, followed, or watched at home or outside?
 
 !-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if( $_POST["q45"])
+    if (isset($_POST["q44"]))
     {
-    echo "q45: ". $_POST['q45']. "<br />";
-    $q45 = $_POST['q45'];
+    $q44 = $_POST['q44'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -99,11 +98,10 @@ Do you feel that you are being tracked, followed, or watched at home or outside?
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question45='" . $q45 . "', " 
+        $sql = "UPDATE answers SET question44='" . $q44 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
-        print($sql);
         $conn->exec($sql);
 
        // Close database connection

@@ -83,9 +83,8 @@ img {
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if( $_POST["q10"])
+    if (isset($_POST["q10"]))
     {
-    echo "q10: ". $_POST['q10']. "<br />";
     $q10 = $_POST['q10'];
 
     // Read database config file and set-up db connection
@@ -103,11 +102,10 @@ img {
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question10='" . $q10 . "', " 
+        $sql = "UPDATE answers SET question10='" . $q10 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
-        print($sql);
         $conn->exec($sql);
 
        // Close database connection

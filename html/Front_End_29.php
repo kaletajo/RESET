@@ -59,10 +59,10 @@ I have felt nervous and on edge
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest34">How does this statement relate to you</label>
+        <label for="quest33">How does this statement relate to you</label>
       </div>
       <div class="col-75">
-        <select id="quest34" name="q34">
+        <select id="quest33" name="q33">
           <option value="0">Never</option>
           <option value="1">Rarely</option>
           <option value="2">Often</option>
@@ -80,10 +80,9 @@ I have felt nervous and on edge
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if( $_POST["q34"])
+    if (isset($_POST["q33"]))
     {
-    echo "q34: ". $_POST['q34']. "<br />";
-    $q34 = $_POST['q34'];
+    $q33 = $_POST['q33'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -100,11 +99,10 @@ I have felt nervous and on edge
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question34='" . $q34 . "', " 
+        $sql = "UPDATE answers SET question33='" . $q33 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
-        print($sql);
         $conn->exec($sql);
 
        // Close database connection

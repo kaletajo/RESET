@@ -81,9 +81,8 @@ Think about yourself for a while and answer a question
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if( $_POST["q25"])
+    if (isset($_POST["q25"]))
     {
-    echo "q25: ". $_POST['q25']. "<br />";
     $q25 = $_POST['q25'];
 
     // Read database config file and set-up db connection
@@ -101,11 +100,10 @@ Think about yourself for a while and answer a question
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question25='" . $q25 . "', " 
+        $sql = "UPDATE answers SET question25='" . $q25 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
-        print($sql);
         $conn->exec($sql);
 
        // Close database connection

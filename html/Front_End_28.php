@@ -62,7 +62,7 @@ I have felt panicked and overhelmed by things in my life
         <label for="quest33">Do you agree with above statement?</label>
       </div>
       <div class="col-75">
-        <select id="quest33" name="q33">
+        <select id="quest32" name="q32">
           <option value="O">Never</option>
           <option value="1">Sometimes</option>
           <option value="2">Very often</option>
@@ -81,10 +81,9 @@ I have felt panicked and overhelmed by things in my life
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if( $_POST["q33"])
+    if (isset($_POST["q32"]))
     {
-    echo "q33: ". $_POST['q33']. "<br />";
-    $q33 = $_POST['q33'];
+    $q32 = $_POST['q32'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -101,11 +100,10 @@ I have felt panicked and overhelmed by things in my life
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question33='" . $q33 . "', " 
+        $sql = "UPDATE answers SET question32='" . $q32 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
-        print($sql);
         $conn->exec($sql);
 
        // Close database connection

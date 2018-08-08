@@ -83,9 +83,9 @@ The most expensive brand of coffee today on the open market is known as Kopi Luw
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if( $_POST["q7"])
+    if (isset($_POST["q7"]))
     {
-    echo "q7: ". $_POST['q7']. "<br />";
+    //echo "q7: ". $_POST['q7']. "<br />";
     $q6 = $_POST['q7'];
 
     // Read database config file and set-up db connection
@@ -104,11 +104,10 @@ The most expensive brand of coffee today on the open market is known as Kopi Luw
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question7='" . $q7 . "', " 
+        $sql = "UPDATE answers SET question7='" . $q7 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
-        print($sql);
         $conn->exec($sql);
 
        // Close database connection

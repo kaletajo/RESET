@@ -59,10 +59,10 @@ Do you struggle to keep up with daily living taska such as showering, changing c
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest43">Select an answer</label>
+        <label for="quest42">Select an answer</label>
       </div>
       <div class="col-75">
-        <select id="quest43" name="q43">
+        <select id="quest42" name="q42">
           <option value="0">Never</option>
           <option value="1">Sometimes</option>
           <option value="2">Very often</option>
@@ -79,10 +79,9 @@ Do you struggle to keep up with daily living taska such as showering, changing c
 
 !-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if( $_POST["q43"])
+    if (isset($_POST["q42"]))
     {
-    echo "q43: ". $_POST['q43']. "<br />";
-    $q43 = $_POST['q43'];
+    $q42 = $_POST['q42'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -100,11 +99,10 @@ Do you struggle to keep up with daily living taska such as showering, changing c
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question43='" . $q43 . "', " 
+        $sql = "UPDATE answers SET question42='" . $q42 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
-        print($sql);
         $conn->exec($sql);
 
        // Close database connection

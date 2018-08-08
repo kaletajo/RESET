@@ -87,7 +87,7 @@ idoe
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if( $_POST["q14"])
+    if (isset($_POST["q14"]))
     {
     echo "q14: ". $_POST['q14']. "<br />";
     $q14 = $_POST['q14'];
@@ -107,11 +107,10 @@ idoe
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question14='" . $q14 . "', " 
+        $sql = "UPDATE answers SET question14='" . $q14 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
-        print($sql);
         $conn->exec($sql);
 
        // Close database connection

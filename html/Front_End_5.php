@@ -60,7 +60,7 @@ img {
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for ="quest9">How does this image makes you feel?</label>
+        <label for="quest9">How does this image makes you feel?</label>
       </div>
       <div class="col-75">
         <select id="quest9" name="q9">
@@ -82,9 +82,8 @@ img {
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if( $_POST["q9"])
+    if (isset($_POST["q9"]))
     {
-    echo "q9: ". $_POST['q9']. "<br />";
     $q9 = $_POST['q9'];
 
     // Read database config file and set-up db connection
@@ -102,11 +101,10 @@ img {
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question9='" . $q9 . "', " 
+        $sql = "UPDATE answers SET question9='" . $q9 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
-        print($sql);
         $conn->exec($sql);
 
        // Close database connection

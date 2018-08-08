@@ -58,10 +58,10 @@ Do you get the sense that others are controlling your thoughts and emotions?
   <form action="#" method="post">
   <div class="row">
     <div class="col-25">
-      <label for="quest42">Select an answer</label>
+      <label for="quest41">Select an answer</label>
     </div>
     <div class="col-75">
-      <select id="quest42" name="q42">
+      <select id="quest41" name="q41">
         <option value="0">Never</option>
         <option value="1">Sometimes</option>
         <option value="2">Very often</option>
@@ -77,10 +77,9 @@ Do you get the sense that others are controlling your thoughts and emotions?
 
 !-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if( $_POST["q42"])
+    if (isset($_POST["q41"]))
     {
-    echo "q42: ". $_POST['q42']. "<br />";
-    $q42 = $_POST['q42'];
+    $q41 = $_POST['q41'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -98,11 +97,10 @@ Do you get the sense that others are controlling your thoughts and emotions?
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question42='" . $q42 . "', " 
+        $sql = "UPDATE answers SET question41='" . $q41 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
-        print($sql);
         $conn->exec($sql);
 
        // Close database connection

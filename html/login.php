@@ -1,10 +1,17 @@
 <?php
-session_start(); 
 
-$error=''; 
+  session_start(); 
+  $error=''; 
+
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
 
 if (isset($_POST['submit'])) {
-
 
   if (empty($_POST['username']) || empty($_POST['password'])) {
     $error = "Username or Password is invalid";
@@ -17,8 +24,8 @@ if (isset($_POST['submit'])) {
     $password=$_POST['password'];
     
     // Tidy input and store as session variables 
-    $username = stripslashes($username);
-    $password = stripslashes($password);
+    $username = test_input($username);
+    $password = test_input($password);
     $_SESSION["username"] = $username;
     $starttime = date("Y-m-d H:i:s");
     $_SESSION["starttime"] = $starttime;
@@ -60,7 +67,6 @@ if (isset($_POST['submit'])) {
         }
     }
 
-    // mysql_close($connection);
   }
 }
 ?>
