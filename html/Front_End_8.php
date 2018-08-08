@@ -62,7 +62,7 @@ img {
       <div class="col-25">
         <label for="quest12">What does this image says about you?</label>
       </div>
-      <div class="col-75"
+      <div class="col-75">
         <select id="quest12" name="q12">
           <option value="0">This image has nothing to do with me</option>
           <option value="1">This is how I often feel deep inside</option>

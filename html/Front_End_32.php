@@ -77,7 +77,7 @@ I have periods where I feel wired or hyper and I am really active
 </html>
 
 
-!-- This code executes when the FORM is submitted using POST method -->
+<!-- This code executes when the FORM is submitted using POST method -->
 <?php
     if (isset($_POST["q36"]))
     {

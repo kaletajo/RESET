@@ -77,7 +77,7 @@ Do you struggle to keep up with daily living taska such as showering, changing c
 </html>
 
 
-!-- This code executes when the FORM is submitted using POST method -->
+<!-- This code executes when the FORM is submitted using POST method -->
 <?php
     if (isset($_POST["q42"]))
     {

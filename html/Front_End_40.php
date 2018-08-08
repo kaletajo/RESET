@@ -76,7 +76,7 @@ Do you feel that you are being tracked, followed, or watched at home or outside?
 </html>
 
 
-!-- This code executes when the FORM is submitted using POST method -->
+<!-- This code executes when the FORM is submitted using POST method -->
 <?php
     if (isset($_POST["q44"]))
     {

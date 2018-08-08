@@ -76,7 +76,7 @@ There are times where I have a lot more interest in sex than at other times.
 </body>
 </html>
 
-!-- This code executes when the FORM is submitted using POST method -->
+<!-- This code executes when the FORM is submitted using POST method -->
 <?php
     if (isset($_POST["q38"]))
     {

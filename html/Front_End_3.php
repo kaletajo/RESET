@@ -86,7 +86,7 @@ The most expensive brand of coffee today on the open market is known as Kopi Luw
     if (isset($_POST["q7"]))
     {
     //echo "q7: ". $_POST['q7']. "<br />";
-    $q6 = $_POST['q7'];
+    $q7 = $_POST['q7'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");

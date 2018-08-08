@@ -76,7 +76,7 @@ I have had times where I am both depressed and elated at the same time
 </body>
 </html>
 
-!-- This code executes when the FORM is submitted using POST method -->
+<!-- This code executes when the FORM is submitted using POST method -->
 <?php
     if (isset($_POST["q37"]))
     {

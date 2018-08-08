@@ -110,7 +110,7 @@ Think about yourself and answer the question.
 
         if(isset($_SESSION['username'])){
           // Go to next page
-          header("location: Front_End_24.php");
+          header("location: Front_End_25.php");
         }
 
     }

@@ -77,7 +77,7 @@ Do you struggle to trust that what you are thinking is real?
 </body>
 </html>
 
-!-- This code executes when the FORM is submitted using POST method -->
+<!-- This code executes when the FORM is submitted using POST method -->
 <?php
     if (isset($_POST["q40"]))
     {

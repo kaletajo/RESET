@@ -76,7 +76,7 @@ Do other people have a difficult time guessing your emotions by your facial expr
 </body>
 </html>
 
-!-- This code executes when the FORM is submitted using POST method -->
+<!-- This code executes when the FORM is submitted using POST method -->
 <?php
     if (isset($_POST["q43"]))
     {
