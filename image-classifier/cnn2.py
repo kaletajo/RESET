@@ -23,12 +23,12 @@ from keras.constraints import maxnorm
 from keras.optimizers import SGD
 from keras.optimizers import Adam
 from keras.optimizers import Adadelta
-from keras.layers.convolutional import Convolution2D
+from keras.layers.convolutional import Conv2D
 from keras.layers.convolutional import MaxPooling2D
 from keras import metrics
 from keras.utils import np_utils
 from keras import backend as K
-K.set_image_dim_ordering('th')
+K.set_image_dim_ordering('tf')
 
 
 from skimage.io import imread
@@ -45,7 +45,8 @@ if K.image_data_format() == 'channels_first':
     input_shape = (3, new_width, new_height)
 else:
     input_shape = (new_width, new_height, 3)
-
+print("input_shape = ", input_shape)
+print('K. = ' , K.image_data_format())
 
 
 # fix random seed for reproducibility
@@ -61,7 +62,6 @@ def load_from_dir(input_dir):
     all_images = []
     all_labels = []
 
-    #print('K. = ' , K.image_data_format())
 
     path = os.path.join(input_dir, '*', '*.*')
     print("input_dir = ", path)
@@ -71,8 +71,22 @@ def load_from_dir(input_dir):
         class_label = os.path.split(dir)[1]
         class_label = class_label.split('-')[0]
         new_img = np.array(resize(imread(fl), (new_width, new_height)) )
-        all_images.append(new_img)
-        all_labels.append([class_label])
+
+        print("Reading: ", fl, "  shape: ", new_img.shape)
+
+        # We only work with RGB 3-channel images
+        if new_img.ndim == 3:       # image is either RGB or YCbCr colorspace 
+
+            if new_img.shape[0] == 32 and new_img.shape[1] == 32 and new_img.shape[2] == 3:
+                all_images.append(new_img)
+                all_labels.append([class_label])
+            else:
+                print("ERROR => ", fl, "  shape: ", new_img.shape)
+                sys.exit(0)
+        elif new_img.ndim == 2:       # this image is grayscale
+            print("Ignoring grayscale image: ", fl)
+        else:                         # Not sure what image is so ignore it.
+            print("Ignoring image unknown type: ", fl)
 
     x_train = np.array(all_images)
     y_train = np.array(all_labels)
@@ -123,9 +137,9 @@ num_classes = y_test_ohe.shape[1]
 
 # Create the model
 model = Sequential()
-model.add(Convolution2D(32, 3, 3, input_shape=(32, 32, 3), border_mode='same', activation='relu', W_constraint=maxnorm(3)))
+model.add(Conv2D(32, (3, 3), input_shape=input_shape, border_mode='same', activation='relu', W_constraint=maxnorm(3)))
 model.add(Dropout(0.2))
-model.add(Convolution2D(32, 3, 3, activation='relu', border_mode='same', W_constraint=maxnorm(3)))
+model.add(Conv2D(32, (3, 3), activation='relu', border_mode='same', W_constraint=maxnorm(3)))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Flatten())
 model.add(Dense(512, activation='relu', W_constraint=maxnorm(3)))
