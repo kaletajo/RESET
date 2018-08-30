@@ -6,80 +6,47 @@
 
 <!DOCTYPE html>
 <html>
+<div id="rectangle"></div>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.dropbtn {
-    background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}
-</style>
-<img src="sad3.jpeg" alt="Sad1" style="width:20%;">
-<img src="sad4.jpeg" alt="Sad2" style="width:20%;">
-<img src="sad21.jpeg" alt="Sad3" style="width:20%;">
-</head>
 <body>
-
-<h2>Look at the photos carefully and answer the question</h2>
-
+<div class="content">
 <div class="container">
   <form action="#" method="post">
     <div class="row">
-      <div class="col-25">
-        <label for="quest6">Do these photos represent neutral sentiment?</label>
+      <div class="col-25"><h2>&nbsp;&nbsp;&nbsp;&nbsp;<font size ="6.0">Question 1</h2>
+        <label for="quest6"><font size ="6.0"><b>&nbsp;&nbsp;&nbsp;Do these photos represent neutral sentiment?</font><br>&nbsp;&nbsp;&nbsp;<font size="4.0">Select an answer from the drop down menu</font></b></label>
+        <style>
+        body{
+        background-color:#90EE90
+        }
+        .content {
+        max-width: 1000px;
+        margin: auto;
+        background: none;
+        padding: 50px;
+        }
+      </style>
+      <br>
+      <br>
+   &nbsp;&nbsp;&nbsp;<img src="sad3.jpeg" alt="Sad1" style="width:30%;">
+   &nbsp;&nbsp;&nbsp;<img src="sad4.jpeg" alt="Sad2" style="width:30%;">
+   &nbsp;&nbsp;&nbsp;<img src="sad21.jpeg" alt="Sad3" style="width:30%;">
       </div>
       <div class="col-75">
-        <select id="quest6" name="q6">
-          <option value="0">YES</option>
-          <option value="1">NO</option>
+       &nbsp;&nbsp;&nbsp;<select id="quest6" name="q6" font="bold" style="font-size:20px; width: 100px, height:40px;"/>
+          <option value="0">Agree</option>
+          <option value="1">Neutral</option>
+          <option value="2">Disagree</option>
         </select>
       </div>
     </div>
+    <br>
     <div class="row">
-      <input type="submit" value="Submit">
+       &nbsp;&nbsp;&nbsp;<input type="submit" value="Submit" font="bold" style="font-size:20px; width: 100px; height: 40px;"/>
     </div>
    </form>
   </div>
-
 </body>
 </html>
 

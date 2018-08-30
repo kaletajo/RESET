@@ -4,66 +4,37 @@
 
 <!DOCTYPE html>
 <html>
+<div id="rectangle"></div>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.dropbtn {
-    background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}
-</style>
-<img src="anger.jpg" alt="Anger" style="width:20%;">
-</head>
 <body>
-
+<div class="content">
+<div class="container">
+<h1>Question 7</h1>
 <h2>Look at the image carefully and answer a question</h2>
+<img src="anger.jpg" alt="Anger" style="width:30%;">
+<style>
+body {
+    background-color:#90EE90
+}
+.content {
+max-width: 1000px;
+margin: auto;
+background: none;
+padding: 50px;
+}
+</style>
 <div class="container">
   <form action="#" method="post">
     <div class="row">
-      <div class="col-25">
-        <label for="quest12">What does this image says about you?</label>
+      <div class="col-25" font="bold" style="font-size:20px; width: 100px, height:40px;">
+       <br>
+       <label for="quest12"><b>What does this image says about you?</label>
+       <br>
       </div>
       <div class="col-75">
-        <select id="quest12" name="q12">
+       <br>
+        <select id="quest12" name="q12" font="bold" style="font-size:20px; width: 100px, height:40px;">
           <option value="0">This image has nothing to do with me</option>
           <option value="1">This is how I often feel deep inside</option>
           <option value="2">I often react like this</option>
@@ -71,13 +42,13 @@ img {
       </div>
     </div>
     <div class="row">
-      <input type="submit" value="Submit">
+    <br>
+      <input type="submit" value="Submit" font="bold" style="font-size:20px; width: 100px, height:40px;">
     </div>
    </form>
   </div>
-
-
 </body>
+</head>
 </html>
 
 

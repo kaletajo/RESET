@@ -4,77 +4,45 @@
 
 <!DOCTYPE html>
 <html>
+<div id="rectangle"></div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.dropbtn {
-    background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}
-</style>
+<div class ="content">
+<div class ="container"> 
 <body>
+<h1>Question 22</h1>
+<style>
+body {
+    background-color:#90EE90
+}
+.content {
+max-width: 1000px;
+margin: auto;
+background: none;
+padding: 50px;
+}
+</style>
 <div> 
-
-Think about yourself for a while and answer a question
-
+<h2>Think about yourself for a while and answer a question</h2>
 <div class="container">
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest25">How would you describe yourself?</label>
+        <label for="quest25" font="bold"style="font-size:20px; width: 100px, height:40px;">How would you describe yourself?</label>
       </div>
       <div class="col-75">
-        <select id="quest25" name="q25">
+        <select id="quest25" name="q25" font="bold"style="font-size:20px; width: 100px, height:40px;">
           <option value="0">I do not feel sad</option>
           <option value="1">I am sad all the time and I often snap</option>
           <option value="2">I am so sad and unhappy that I can't stand it</option>
         </select>
        </div>
       </div>
+      <br>
       <div class="row">
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit"font="bold"style="font-size:20px; width: 100px, height:40px;">
       </div>
      </form>
     </div>
-
 </body>
 </html>
 

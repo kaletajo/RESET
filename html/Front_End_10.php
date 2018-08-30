@@ -4,84 +4,49 @@
 
 <!DOCTYPE html>
 <html>
+<div id="rectangle"></div>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-video {
-    width: 50%;
-    height: auto;
-}
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.dropbtn {
-    background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-}
-idoe
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;100
-</style>
 <body>
-<video width="100" controls>
+<div class="content">
+<div class="container">
+<h2>Question 9</h2>
+<video width="500" controls>
   <source src="video1.mp4" type="video/mp4">
 </video>
-
-
+<style>
+body {
+    background-color:#90EE90
+}
+.content {
+max-width: 1000px;
+margin: auto;
+background: none;
+padding: 50px;
+}
+</style>
 <h2>Watch the video carefully, you will be asked a question about the content</h2>
 <div class="container">
   <form action="#" method="post">
     <div class="row">
-      <div class="col-25">
-        <label for="quest14">What emotion do you see in the video</label>
+      <div class="col-25" font="bold" style="font-size:20px; width: 100px, height:40px;">
+        <label for="quest14"><b>What emotion do you see in the video</label>
       </div>
       <div class="col-75">
-        <select id="quest14" name="q14">
+        <select id="quest14" name="q14" font="bold" style="font-size:20px; width: 100px, height:40px;">
+          <br>
           <option value="0">Anxiety</option>
           <option value="1">Anger</option>
           <option value="2">Joy</option>
         </select>
        </div>
       </div>
+      <br>
       <div class="row">
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" font="bold" style="font-size:20px; width: 100px, height:40px;">
       </div>
      </form>
     </div>
-
 </body>
 </html>
 

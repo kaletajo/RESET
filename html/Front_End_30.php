@@ -4,73 +4,41 @@
 
 <!DOCTYPE html>
 <html>
+<div id="rectangle"></div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.dropbtn {
-    background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}
-</style>
 <body>
-<div> 
-
-I seem to be constantly worrying about things
-
+<div class ="content">
+<div class ="container"> 
+<h1>Question 31</h1>
+<h2>I seem to be constantly worrying about things</h2>
+<style>
+body {
+    background-color:#90EE90
+}
+.content {
+max-width: 1000px;
+margin: auto;
+background: none;
+padding: 50px;
+}
+</style>
 <div class="container">
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest34">How often do you feel as the person above?</label>
+        <label for="quest34"font="bold"style="font-size:20px; width: 100px, height:40px;">How often do you feel as the person above?</label>
       </div>
       <div class="col-75">
-        <select id="quest34" name="q34">
+        <select id="quest34" name="q34" font="bold"style="font-size:20px; width: 100px, height:40px;">
           <option value="0">Rarely</option>
           <option value="1">Sometimes</option>
           <option value="2">Often</option>
         </select>
        </div>
       </div>
+      <br>
       <div class="row">
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
       </div>
      </form>
     </div>

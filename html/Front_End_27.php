@@ -4,77 +4,44 @@
 
 <!DOCTYPE html>
 <html>
+<div id="rectangle"></div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.dropbtn {
-    background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}
-</style>
+<div class ="content">
+<div class ="container"> 
 <body>
-<div> 
-
-I have had stomach problems, such as feeling sick or stomach cramps
-
+<style>
+body {
+    background-color:#90EE90
+}
+.content {
+max-width: 1000px;
+margin: auto;
+background: none;
+padding: 50px;
+}
+</style>
+<h1>Question 28</h1> 
+<h2>I have had stomach problems, such as feeling sick or stomach cramps</h2>
 <div class="container">
   <form action="#" method="post">
   <div class="row">
     <div class="col-25">
-      <label for="quest31">Do you agree with above statement?</label>
+      <label for="quest31"font="bold"style="font-size:20px; width: 100px, height:40px;">Do you agree with above statement?</label>
     </div>
     <div class="col-75">
-      <select id="quest31" name="q31">
+      <select id="quest31" name="q31" font="bold"style="font-size:20px; width: 100px, height:40px;">
         <option value="0">Never</option>
         <option value="1">Sometime</option>
         <option value="2">Very often</option>
      </select>
     </div>
    </div>
+   <br>
    <div class="row">
-     <input type="submit" value="Submit">
+     <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
    </div>
   </form>
  </div>
-
 </body>
 </html>
 
