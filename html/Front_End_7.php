@@ -4,47 +4,59 @@
 
 <!DOCTYPE html>
 <html>
+<div id="rectangle"></div>
+<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<h2>Question 6</h2>
 <body>
-<div class="col-25" font="bold" style="font-size:20px; width: 100px, height:40px;"><b>
-Europa is the sixth closest moon of the planet Jupiter, and one of the largest moons in the solar system. Europa is slightly smaller that the Earth's moon and has a tenuous atmosphere composed primary of oxygen.The surface of Europa is composed of water and it is one of the smoothest in the solar system. Scientists suggest that it is possible Europa has an ocean of liquid water beneath it's surface, making it a strong candidate for extra-terrestrial life. It is also predicted that heat energy from tidal flexing might cause oceans to remain liquid and drives geological activity similar to plate tectonics on Earth.
-<p>After reading the text answer the following question</p>
+<div class="content">
 <div class="container">
-  <form action="#" method="post">
-    <div class="row">
-      <div class="col-25" font="bold" style="font-size:20px; width: 100px, height:40px;">
-        <label for="quest11"><font size ="5.0">What makes Europa a potential home to extra-terrestrial life?</font></label>
-      </div>
-      <div class="col-75" font="bold" style="font-size:20px; width: 100px, height:40px;">
-        <select id="quest11" name="q11" font="bold" style="font-size:20px; width: 100px, height:40px;">
-          <br>
-          <option value="0">Ocean below its surface</option>
-          <option value="1">Atmosphere comprised of oxygen</option>
-          <option value="2">Geological activity</option>
-        </select>
-      </div>
-     </div>
-     <br>
-     <div class="row">
-       <input type="submit" value="Submit" font="bold" style="font-size:20px; width: 100px, height:40px;">
-     </div>
-    </form>
-  </div>
-</body>
+<h1>Question 7</h1>
+<h2>Look at the image carefully and answer a question</h2>
+<img src="anger.jpg" alt="Anger" style="width:30%;">
 <style>
 body {
     background-color:#90EE90
 }
+.content {
+max-width: 1000px;
+margin: auto;
+background: none;
+padding: 50px;
+}
 </style>
+<div class="container">
+  <form action="#" method="post">
+    <div class="row">
+      <div class="col-25" font="bold" style="font-size:20px; width: 100px, height:40px;">
+       <br>
+       <label for="quest7"><b>What does this image say about you?</label>
+       <br>
+      </div>
+      <div class="col-75">
+       <br>
+        <select id="quest7" name="q7" font="bold" style="font-size:20px; width: 100px, height:40px;">
+          <option value="0">This image has nothing to do with me</option>
+          <option value="1">This is how I often feel deep inside</option>
+          <option value="2">I often react like this</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+    <br>
+      <input type="submit" value="Submit" font="bold" style="font-size:20px; width: 100px, height:40px;">
+    </div>
+   </form>
+  </div>
+</body>
+</head>
 </html>
 
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if (isset($_POST["q11"]))
+    if (isset($_POST["q7"]))
     {
-    $q11 = $_POST['q11'];
+    $q7 = $_POST['q7'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -61,7 +73,7 @@ body {
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question11='" . $q11 . "' " 
+        $sql = "UPDATE answers SET question7='" . $q7 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
@@ -82,4 +94,7 @@ body {
     }
     }
 ?>
+
+
+
 

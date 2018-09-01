@@ -5,12 +5,12 @@
 <!DOCTYPE html>
 <html>
 <div id="rectangle"></div>
-<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
 <div class="content">
 <div class="container">
-<h1>Question 10</h1>
+<h1>Question 11</h2>
+<h2>Look at the following series of images carefully and answer a question</h2>
 <style>
 body {
     background-color:#90EE90
@@ -22,36 +22,39 @@ background: none;
 padding: 50px;
 }
 </style>
-<h2>Which year did the second World War started in Europe?</h2>
+<div> 
 <div class="container">
   <form action="#" method="post">
     <div class="row">
-      <div class="col-25" font="bold" style="font-size:20px; width: 100px, height:40px;">
-        <label for="quest15"><b>Select from one of the following answers</label>
+      <div class="col-25">
+        <label for="quest11" font="bold" style="font-size:20px; width: 100px, height:40px;">What do you see in following series of events?</label>
+        <br>
+        <br>
+        <img src="photo.jpg" alt="Photo" style="width:30%;">
       </div>
       <div class="col-75">
-          <br>
-        <select id="quest15" name="q15" font="bold" style="font-size:20px; width: 100px, height:40px;">
-          <option value="0">1918</option>
-          <option value="1">1939</option>
-          <option value="2">1941</option>
+      <br>
+        <select id="quest11" name="q11" font="bold" style="font-size:20px; width: 100px, height:40px;">
+          <option value="0">A boy is looking for a butterfly and finds it</option>
+          <option value="1">A boy sees a butterfly and catches it</option>
+          <option value="2">A boy is chasing a butterfly</option>
         </select>
       </div>
-    </div>
-    <br>
-    <div class="row">
-      <input type="submit" value="Submit" font="bold" style="font-size:20px; width: 100px, height:40px;">
-    </div>
-   </form>
-  </div>
+     </div>
+     <br>
+     <div class="row">
+       <input type="submit" value="Submit" font="bold" style="font-size:20px; width: 100px, height:40px;">
+     </div>
+    </form>
+   </div>
 </body>
 </html>
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if (isset($_POST["q15"]))
+    if (isset($_POST["q11"]))
     {
-    $q15 = $_POST['q15'];
+    $q11 = $_POST['q11'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -68,7 +71,7 @@ padding: 50px;
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question15='" . $q15 . "' " 
+        $sql = "UPDATE answers SET question11='" . $q11 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned

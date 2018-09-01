@@ -4,61 +4,47 @@
 
 <!DOCTYPE html>
 <html>
-<div id="rectangle"></div>
-<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<h2>Question 6</h2>
 <body>
-<div class="content">
-<div class="container">
-<h1>Question 5</h1>
-<h2>Look at the pictures carefully</h2>
-<img src="joy1.jpeg" alt="Joy1" style="width:30%;">
-<img src="joy2.jpeg" alt="Joy2" style="width:30%;">
-<img src="joy3.jpeg" alt="Joy3" style="width:30%;">
-<style>
-body{
- background-color:#90EE90
-}
-.content {
-max-width: 1000px;
-margin: auto;
-background: none;
-padding: 50px;
-}
-</style>
+<div class="col-25" font="bold" style="font-size:20px; width: 100px, height:40px;"><b>
+Europa is the sixth closest moon of the planet Jupiter, and one of the largest moons in the solar system. Europa is slightly smaller that the Earth's moon and has a tenuous atmosphere composed primarily of oxygen. The surface of Europa is composed of water and it is one of the smoothest in the solar system. Scientists suggest that it is possible Europa has an ocean of liquid water beneath it's surface, making it a strong candidate for extra-terrestrial life. It is also predicted that heat energy from tidal flexing might cause oceans to remain liquid and drives geological activity similar to plate tectonics on Earth.
+<p>After reading the text answer the following question</p>
 <div class="container">
   <form action="#" method="post">
     <div class="row">
       <div class="col-25" font="bold" style="font-size:20px; width: 100px, height:40px;">
-      <br>
-        <label for="quest10"><font size ="5.0"><b>Does these photos represent happiness</font></label>
+        <label for="quest6"><font size ="5.0">What makes Europa a potential home to extra-terrestrial life?</font></label>
       </div>
-      <div class="col-75">
-        <select id="quest10" name="q10" font="bold" style="font-size:20px; width: 100px, height:40px;">
+      <div class="col-75" font="bold" style="font-size:20px; width: 100px, height:40px;">
+        <select id="quest6" name="q6" font="bold" style="font-size:20px; width: 100px, height:40px;">
           <br>
-          <br>
-          <option value="0">Agree</option>
-          <option value="1">Neutral</option>
-          <option value="2">Disagree</option>
+          <option value="0">Ocean below its surface</option>
+          <option value="1">Atmosphere comprised of oxygen</option>
+          <option value="2">Geological activity</option>
         </select>
       </div>
      </div>
+     <br>
      <div class="row">
-     <br>
-     <br>
        <input type="submit" value="Submit" font="bold" style="font-size:20px; width: 100px, height:40px;">
      </div>
     </form>
-   </div>
+  </div>
 </body>
-</head>
+<style>
+body {
+    background-color:#90EE90
+}
+</style>
 </html>
+
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if (isset($_POST["q10"]))
+    if (isset($_POST["q6"]))
     {
-    $q10 = $_POST['q10'];
+    $q6 = $_POST['q6'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -75,7 +61,7 @@ padding: 50px;
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question10='" . $q10 . "' " 
+        $sql = "UPDATE answers SET question6='" . $q6 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned

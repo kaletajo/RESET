@@ -1,6 +1,7 @@
 <?php
     session_start();
 ?>
+
 <!DOCTYPE html>
 <html>
 <div id="rectangle"></div>
@@ -9,8 +10,10 @@
 <body>
 <div class="content">
 <div class="container">
-<h1>Question 8</h1>
-<h2>Think for a moment about your future and answer the question</h2>
+<h2>Question 9</h2>
+<video width="500" controls>
+  <source src="video1.mp4" type="video/mp4">
+</video>
 <style>
 body {
     background-color:#90EE90
@@ -22,37 +25,37 @@ background: none;
 padding: 50px;
 }
 </style>
+<h2>Watch the video carefully, you will be asked a question about the content</h2>
 <div class="container">
   <form action="#" method="post">
     <div class="row">
-      <div class="col-25"font="bold" style="font-size:20px; width: 100px, height:40px;">
-        <label for="quest13"><b>How do you see your future?</label>
+      <div class="col-25" font="bold" style="font-size:20px; width: 100px, height:40px;">
+        <label for="quest9"><b>What emotion do you see in the video?</label>
       </div>
       <div class="col-75">
-      <br>
-        <select id="quest13" name="q13" font="bold" style="font-size:20px; width: 100px, height:40px;">
-          <option value="0">I do not think anything positive will happen to me</option>
-          <option value="1">I think only bad things will happen to me</option>
-          <option value="2">I see my future bright</option>
+        <select id="quest9" name="q9" font="bold" style="font-size:20px; width: 100px, height:40px;">
+          <br>
+          <option value="0">Anxiety</option>
+          <option value="1">Anger</option>
+          <option value="2">Joy</option>
         </select>
+       </div>
       </div>
-     </div>
-     <br>
-     <div class="row">
-       <input type="submit" value="Submit" font="bold" style="font-size:20px; width: 100px, height:40px;">
-     </div>
-    </form>
-   </div>
+      <br>
+      <div class="row">
+        <input type="submit" value="Submit" font="bold" style="font-size:20px; width: 100px, height:40px;">
+      </div>
+     </form>
+    </div>
 </body>
-</head>
-<body>
 </html>
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if (isset($_POST["q13"]))
+    if (isset($_POST["q9"]))
     {
-    $q13 = $_POST['q13'];
+    echo "q9: ". $_POST['q9']. "<br />";
+    $q9 = $_POST['q9'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -69,7 +72,7 @@ padding: 50px;
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question13='" . $q13 . "' " 
+        $sql = "UPDATE answers SET question9='" . $q9 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned

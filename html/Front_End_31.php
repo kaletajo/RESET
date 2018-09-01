@@ -4,13 +4,13 @@
 
 <!DOCTYPE html>
 <html>
-<div id="rectangle"></div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<div id="rectangle"></div>
 <body>
 <div class ="content">
 <div class ="container"> 
-<h1>Question 32</h1>
-<h2>Sometimes I am much more talkative than at other times</h2>
+<h1>Question 31</h1>
+<h2>I have periods where I feel wired or hyper and I am really active</h2>
 <style>
 body {
     background-color:#90EE90
@@ -26,15 +26,15 @@ padding: 50px;
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest35" font="bold"style="font-size:20px; width: 100px, height:40px;">How do you relate to the above statement?</label>
+        <label for="quest31" font="bold"style="font-size:20px; width: 100px, height:40px;">How often do you feel as described above?</label>
       </div>
       <div class="col-75">
-        <select id="quest35" name="q35" font="bold"style="font-size:20px; width: 100px, height:40px;">
+        <select id="quest31" name="q31" font="bold"style="font-size:20px; width: 100px, height:40px;">
           <option value="0">Not at all</option>
-          <option value="1">Often</option>
+          <option value="1">A little</option>
           <option value="2">Quite a lot</option>
         </select>
-       </div>
+       </div> 
       </div>
       <br>
       <div class="row">
@@ -45,9 +45,9 @@ padding: 50px;
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if (isset($_POST["q35"]))
+    if (isset($_POST["q31"]))
     {
-    $q35 = $_POST['q35'];
+    $q31 = $_POST['q31'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -57,7 +57,6 @@ padding: 50px;
     $dbpassword = $db['passwd'];
     $dbtype = $db['type'];
 
-
     $username = $_SESSION["username"];
     $starttime = $_SESSION["starttime"];
     try {
@@ -65,7 +64,7 @@ padding: 50px;
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question35='" . $q35 . "' " 
+        $sql = "UPDATE answers SET question31='" . $q31 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
@@ -73,6 +72,7 @@ padding: 50px;
 
        // Close database connection
         $conn = null;
+
 
         if(isset($_SESSION['username'])){
           // Go to next page
@@ -86,5 +86,6 @@ padding: 50px;
     }
     }
 ?>
+
 
 

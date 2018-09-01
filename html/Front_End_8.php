@@ -1,7 +1,6 @@
 <?php
     session_start();
 ?>
-
 <!DOCTYPE html>
 <html>
 <div id="rectangle"></div>
@@ -10,9 +9,8 @@
 <body>
 <div class="content">
 <div class="container">
-<h1>Question 7</h1>
-<h2>Look at the image carefully and answer a question</h2>
-<img src="anger.jpg" alt="Anger" style="width:30%;">
+<h1>Question 8</h1>
+<h2>Think for a moment about your future and then answer the question</h2>
 <style>
 body {
     background-color:#90EE90
@@ -27,36 +25,34 @@ padding: 50px;
 <div class="container">
   <form action="#" method="post">
     <div class="row">
-      <div class="col-25" font="bold" style="font-size:20px; width: 100px, height:40px;">
-       <br>
-       <label for="quest12"><b>What does this image says about you?</label>
-       <br>
+      <div class="col-25"font="bold" style="font-size:20px; width: 100px, height:40px;">
+        <label for="quest8"><b>How do you see your future?</label>
       </div>
       <div class="col-75">
-       <br>
-        <select id="quest12" name="q12" font="bold" style="font-size:20px; width: 100px, height:40px;">
-          <option value="0">This image has nothing to do with me</option>
-          <option value="1">This is how I often feel deep inside</option>
-          <option value="2">I often react like this</option>
+      <br>
+        <select id="quest8" name="q8" font="bold" style="font-size:20px; width: 100px, height:40px;">
+          <option value="0">I do not think anything positive will happen to me</option>
+          <option value="1">I think only bad things will happen to me</option>
+          <option value="2">I see my future bright</option>
         </select>
       </div>
-    </div>
-    <div class="row">
-    <br>
-      <input type="submit" value="Submit" font="bold" style="font-size:20px; width: 100px, height:40px;">
-    </div>
-   </form>
-  </div>
+     </div>
+     <br>
+     <div class="row">
+       <input type="submit" value="Submit" font="bold" style="font-size:20px; width: 100px, height:40px;">
+     </div>
+    </form>
+   </div>
 </body>
 </head>
+<body>
 </html>
-
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if (isset($_POST["q12"]))
+    if (isset($_POST["q8"]))
     {
-    $q12 = $_POST['q12'];
+    $q8 = $_POST['q8'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -73,7 +69,7 @@ padding: 50px;
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question12='" . $q12 . "' " 
+        $sql = "UPDATE answers SET question8='" . $q8 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
@@ -94,7 +90,4 @@ padding: 50px;
     }
     }
 ?>
-
-
-
 

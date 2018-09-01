@@ -9,8 +9,8 @@
 <body>
 <div class ="content">
 <div class ="container">
-<h1>Question 14</h1>
-<h2>Look at the image carefully and answer a question</h2>
+<h1>Question 13</h1>
+<h2>Look at the video and answer a question</h2>
 <style>
 body {
     background-color:#90EE90
@@ -27,30 +27,33 @@ padding: 50px;
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <br>
-        <label for="quest17"font="bold" style="font-size:20px; width: 100px, height:40px;">What emotion does the image represents?</label>
+      <br>
+        <label for="quest13"font="bold" style="font-size:20px; width: 100px, height:40px;">What do you see in the video</label>
       </div>
       <div class="col-75">
-        <select id="quest17" name="q17" font="bold" style="font-size:20px; width: 100px, height:40px;">
-          <option value="0">Angry</option>
-          <option value="1">Happy</option>
-          <option value="2">Scared</option>
+      <br>
+        <select id="quest13" name="q13"font="bold" style="font-size:20px; width: 100px, height:40px;">
+          <option value="0">A policeman gets shot</option>
+          <option value="1">A policeman gets what he deserves</option>
+          <option value="2">God takes policeman soul</option>
         </select>
       </div>
-     </div>
-     <br>
-     <div class="row">
-       <input type="submit" value="Submit" font="bold" style="font-size:20px; width: 100px, height:40px;">
-     </div>
-    </form>
-   </div>
+    </div>
+    <br>
+    <div class="row">
+      <input type="submit" value="Submit"font="bold" style="font-size:20px; width: 100px, height:40px;">
+    </div>
+   </form>
+  </div>
 </body>
 </html>
+
+
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if (isset($_POST["q17"]))
+    if (isset($_POST["q13"]))
     {
-    $q17 = $_POST['q17'];
+    $q13 = $_POST['q13'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -67,7 +70,7 @@ padding: 50px;
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question17='" . $q17 . "' " 
+        $sql = "UPDATE answers SET question13='" . $q13 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned

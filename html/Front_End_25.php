@@ -2,15 +2,12 @@
     session_start();
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <div id="rectangle"></div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <div class ="content">
 <div class ="container"> 
-<h1>Question 26</h1>
-<h2>Think about yourself and answer a question</h2> 
 <body>
 <style>
 body {
@@ -23,17 +20,20 @@ background: none;
 padding: 50px;
 }
 </style> 
+<h1>Question 25</h1>
+<h2>I find it very hard to unwind, relax or sit still</h2>
+<p><font size="5.0"><b>Select an answer</p></font>
 <div class="container">
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest29"font="bold"style="font-size:20px; width: 100px, height:40px;">Which statement best describes you?</label>
+        <label for="quest25" font="bold"style="font-size:20px; width: 100px, height:40px;">Do you agree with above statement</label>
       </div>
       <div class="col-75">
-        <select id="quest29" name="q29" font="bold"style="font-size:20px; width: 100px, height:40px;">
-          <option value="0">I don't get more tired than usual</option>
-          <option value="1">I get tired more easily than I used to</option>
-          <option value="2">I get tired from doing almost anything</option>
+        <select id="quest25" name="q25" font="bold"style="font-size:20px; width: 100px, height:40px;">
+          <option value="0">Never</option>
+          <option value="1">Sometimes</option>
+          <option value="2">Often</option>
         </select>
       </div>
      </div>
@@ -49,9 +49,9 @@ padding: 50px;
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if (isset($_POST["q29"]))
+    if (isset($_POST["q25"]))
     {
-    $q29 = $_POST['q29'];
+    $q25 = $_POST['q25'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -68,7 +68,7 @@ padding: 50px;
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question29='" . $q29 . "' " 
+        $sql = "UPDATE answers SET question25='" . $q25 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned

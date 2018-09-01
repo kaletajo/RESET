@@ -10,8 +10,11 @@
 <body>
 <div class="content">
 <div class="container">
-<h1>Question 4</h1>
-<h2>Look at the image carefully</h2>
+<h1>Question 5</h1>
+<h2>Look at the pictures carefully</h2>
+<img src="joy1.jpeg" alt="Joy1" style="width:30%;">
+<img src="joy2.jpeg" alt="Joy2" style="width:30%;">
+<img src="joy3.jpeg" alt="Joy3" style="width:30%;">
 <style>
 body{
  background-color:#90EE90
@@ -23,39 +26,39 @@ background: none;
 padding: 50px;
 }
 </style>
-<img src="injustice.jpg" alt="Injustice" style="width:30%;">
 <div class="container">
   <form action="#" method="post">
     <div class="row">
       <div class="col-25" font="bold" style="font-size:20px; width: 100px, height:40px;">
-        <br>
-        <label for="quest9"><b>How does this image makes you feel?</label>
+      <br>
+        <label for="quest5"><font size ="5.0"><b>Do you think these photos represent happiness?</font></label>
       </div>
       <div class="col-75">
-        <select id="quest9" name="q9" font="bold" style="font-size:20px; width: 100px, height:40px;">
+        <select id="quest5" name="q5" font="bold" style="font-size:20px; width: 100px, height:40px;">
           <br>
           <br>
-          <option value="0">Angry</option>
-          <option value="1">Ambivalent</option>
-          <option value="2">Makes me laugh</option>
+          <option value="0">Agree</option>
+          <option value="1">Neutral</option>
+          <option value="2">Disagree</option>
         </select>
       </div>
-    </div>
-    <br>
-    <br>
-    <div class="row">
-      <input type="submit" value="Submit" font="bold" style="font-size:20px; width: 100px, height:40px;">
-    </div>
-   </form>
- </div>
+     </div>
+     <div class="row">
+     <br>
+     <br>
+       <input type="submit" value="Submit" font="bold" style="font-size:20px; width: 100px, height:40px;">
+     </div>
+    </form>
+   </div>
 </body>
+</head>
 </html>
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if (isset($_POST["q9"]))
+    if (isset($_POST["q5"]))
     {
-    $q9 = $_POST['q9'];
+    $q5 = $_POST['q5'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -72,7 +75,7 @@ padding: 50px;
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question9='" . $q9 . "' " 
+        $sql = "UPDATE answers SET question5='" . $q5 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned

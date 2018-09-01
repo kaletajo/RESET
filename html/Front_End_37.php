@@ -1,15 +1,16 @@
 <?php
     session_start();
 ?>
+
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
 <div id="rectangle"></div>
 <body>
 <div class ="content">
 <div class ="container"> 
-<h1>Question 38</h1>
-<h2>Do you get the sense that others are controlling your thoughts and emotions?</h2>
+<h1>Question 37</h1>
+<h2>Do other people have a difficult time guessing your emotions by your facial expressions?</h2>
 <style>
 body {
     background-color:#90EE90
@@ -20,35 +21,34 @@ margin: auto;
 background: none;
 padding: 50px;
 }
-</style>
-
+</style> 
 <div class="container">
   <form action="#" method="post">
-  <div class="row">
-    <div class="col-25">
-      <label for="quest41"font="bold"style="font-size:20px; width: 100px, height:40px;">Select an answer</label>
-    </div>
-    <div class="col-75">
-      <select id="quest41" name="q41"font="bold"style="font-size:20px; width: 100px, height:40px;">
-        <option value="0">Never</option>
-        <option value="1">Sometimes</option>
-        <option value="2">Very often</option>
-      </select>
-     </div>
-    </div>
-    <br>
     <div class="row">
-      <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
-    </div>
+      <div class="col-25">
+        <label for="quest37" font="bold"style="font-size:20px; width: 100px, height:40px;">Select an answer</label>
+      </div>
+      <div class="col-75">
+        <select id="quest37" name="q37" font="bold"style="font-size:20px; width: 100px, height:40px;">
+          <option value="0">Never</option>
+          <option value="1">Sometimes</option>
+          <option value="2">Very often</option>
+        </select>
+       </div>
+      </div>
+      <br>
+      <div class="row">
+        <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
+      </div>
 
 </body>
 </html>
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if (isset($_POST["q41"]))
+    if (isset($_POST["q37"]))
     {
-    $q41 = $_POST['q41'];
+    $q37 = $_POST['q37'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -66,7 +66,7 @@ padding: 50px;
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question41='" . $q41 . "' " 
+        $sql = "UPDATE answers SET question37='" . $q37 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
@@ -77,8 +77,9 @@ padding: 50px;
 
         if(isset($_SESSION['username'])){
           // Go to next page
-          header("location: Front_End_38.php");
-       }
+          header("location: iv1.php");
+
+        }
     }
     catch(PDOException $e)
     {

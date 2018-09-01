@@ -4,12 +4,13 @@
 
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <div id="rectangle"></div>
 <body>
 <div class ="content">
 <div class ="container"> 
-<h1>Question 34</h1>
-<h2>I have periods where I feel wired or hyper and I am really active</h2>
+<h1>Question 33</h1>
+<h2>At times I am very sociable and other times I just want to be left alone</h2>
 <style>
 body {
     background-color:#90EE90
@@ -20,15 +21,15 @@ margin: auto;
 background: none;
 padding: 50px;
 }
-</style> 
+</style>
 <div class="container">
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest37"font="bold"style="font-size:20px; width: 100px, height:40px;">How do you relate to the above statement</label>
-      </div>
+        <label for="quest33"font="bold" style="font-size:20px; width: 100px, height:40px;">Does the above statement reflects how you feel</label>
+    </div>
       <div class="col-75">
-        <select id="quest37" name="q37" font="bold"style="font-size:20px; width: 100px, height:40px;">
+        <select id="quest33" name="q33" font="bold"style="font-size:20px; width: 100px, height:40px;">
           <option value="0">Not at all</option>
           <option value="1">A little</option>
           <option value="2">Quite a lot</option>
@@ -43,11 +44,12 @@ padding: 50px;
 </body>
 </html>
 
+
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if (isset($_POST["q37"]))
+    if (isset($_POST["q33"]))
     {
-    $q37 = $_POST['q37'];
+    $q33 = $_POST['q33'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -65,7 +67,7 @@ padding: 50px;
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question37='" . $q37 . "' " 
+        $sql = "UPDATE answers SET question33='" . $q33 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned

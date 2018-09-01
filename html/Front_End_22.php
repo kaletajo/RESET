@@ -6,11 +6,11 @@
 <html>
 <div id="rectangle"></div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<body>
 <div class ="content">
-<div class ="container">  
-<h1>Question 23</h1>
-<h2>Think about yourself and answer a question</h2> 
+<div class ="container"> 
+<body>
+<h1>Question 22</h1>
+<h2>Think about yourself for a moment and then answer this question</h2> 
 <style>
 body {
     background-color:#90EE90
@@ -26,14 +26,15 @@ padding: 50px;
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest26" font="bold"style="font-size:20px; width: 100px, height:40px;">How do you feel about yourself?</label>
+        <label for="quest22"font="bold"style="font-size:20px; width: 100px, height:40px;">Which statement best describes you?</label>
+        <br>
       </div>
       <div class="col-75">
-        <select id="quest26" name="q26" font="bold"style="font-size:20px; width: 100px, height:40px;">
-          <option value="0">I do not feel like a failure</option>
-          <option value="1">As I look back on my life, all I can see is a lot of failures</option>
-          <option value="2">I feel I am a complete failure as a person</option>
-        </select>
+       <select id="quest22" name="q22"font="bold"style="font-size:20px; width: 100px, height:40px;">
+         <option value="0">I am no more irritated by things than I ever was</option>
+         <option value="1">I am quite annoyed or irritated a good deal of the time</option>
+         <option value="2">I feel irritated all the time</option>
+       </select>
       </div>
      </div>
      <br>
@@ -41,15 +42,16 @@ padding: 50px;
        <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
      </div>
     </form>
-  </div>
+   </div>
 </body>
 </html>
 
+
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if (isset($_POST["q26"]))
+    if (isset($_POST["q22"]))
     {
-    $q26 = $_POST['q26'];
+    $q22 = $_POST['q22'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -66,7 +68,7 @@ padding: 50px;
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question26='" . $q26 . "' " 
+        $sql = "UPDATE answers SET question22='" . $q22 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned

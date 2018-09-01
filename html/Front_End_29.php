@@ -9,8 +9,8 @@
 <body>
 <div class ="content">
 <div class ="container"> 
-<h1>Question 30</h1>
-<h2>I have felt nervous and on edge</h2>
+<h1>Question 29</h1>
+<h2>I seem to be constantly worrying about things</h2>
 <style>
 body {
     background-color:#90EE90
@@ -26,30 +26,32 @@ padding: 50px;
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest33" font="bold"style="font-size:20px; width: 100px, height:40px;">How does this statement relate to you</label>
+        <label for="quest29"font="bold"style="font-size:20px; width: 100px, height:40px;">How often do you feel as the person above?</label>
       </div>
       <div class="col-75">
-        <select id="quest33" name="q33" font="bold"style="font-size:20px; width: 100px, height:40px;">
-          <option value="0">Never</option>
-          <option value="1">Rarely</option>
+        <select id="quest29" name="q29" font="bold"style="font-size:20px; width: 100px, height:40px;">
+          <option value="0">Rarely</option>
+          <option value="1">Sometimes</option>
           <option value="2">Often</option>
         </select>
+       </div>
       </div>
-     </div>
-     <br>
-     <div class="row">
-       <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
-     </div>
-    </form>
-   </div>
+      <br>
+      <div class="row">
+        <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
+      </div>
+     </form>
+    </div>
+
+
 </body>
 </html>
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if (isset($_POST["q33"]))
+    if (isset($_POST["q29"]))
     {
-    $q33 = $_POST['q33'];
+    $q29 = $_POST['q29'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -66,7 +68,7 @@ padding: 50px;
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question33='" . $q33 . "' " 
+        $sql = "UPDATE answers SET question29='" . $q29 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
@@ -87,7 +89,6 @@ padding: 50px;
     }
     }
 ?>
-
 
 
 

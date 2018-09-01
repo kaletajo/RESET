@@ -2,19 +2,36 @@
     session_start();
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <div id="rectangle"></div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
 <div class ="content">
 <div class ="container"> 
-<h2>Question 18</h2>
-<h2>Answer the following question</h2>
+<h1>Question 17</h1> 
+<h2>Answer the following question.</h2> 
+<div class="container">
+  <form action="#" method="post">
+  <div class="row">
+    <div class="col-25">
+      <label for="quest17" font="bold"style="font-size:20px; width: 100px, height:40px;">How often do you worry?</label>
+    </div>
+    <div class="col-75">
+      <select id="quest17" name="q17" font="bold"style="font-size:20px; width: 100px, height:40px;">
+        <option value="0">I worry too much</option>
+        <option value="1">I do not worry much</option>
+        <option value="2">I realised that I can not influence everything</option>
+      </select>
+    </div>
+   </div>
+   <br>
+   <div class="row">
+     <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
+   </div>
+  </form>
+ </div>
 <style>
-body {
-    background-color:#90EE90
-}
 body {
     background-color:#90EE90
 }
@@ -25,38 +42,14 @@ background: none;
 padding: 50px;
 }
 </style>
-<body>
-<div> 
-<div class="container">
-  <form action="#" method="post">
-  <div class="row">
-    <div class="col-25">
-      <label for="quest21" font="bold"style="font-size:20px; width: 100px, height:40px;">How is your social life?</label>
-    </div>
-    <div class="col-75">
-    <br>
-      <select id="quest21" name="q21" font="bold"style="font-size:20px; width: 100px, height:40px;">
-        <option value="0">I have few good friends</option>
-        <option value="1">I do not like people</option>
-        <option value="2">I have loads of friends</option>
-      </select>
-     </div>
-    </div>
-    <br>
-    <div class="row">
-      <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
-    </div>
-   </form>
-  </div>
 </body>
 </html>
 
-
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if (isset($_POST["q21"]))
+    if (isset($_POST["q17"]))
     {
-    $q21 = $_POST['q21'];
+    $q17 = $_POST['q17'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -73,7 +66,7 @@ padding: 50px;
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question21='" . $q21 . "' " 
+        $sql = "UPDATE answers SET question17='" . $q17 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned

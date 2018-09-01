@@ -6,10 +6,11 @@
 <html>
 <div id="rectangle"></div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<div class ="content">
-<div class ="container"> 
 <body>
-<h1>Question 22</h1>
+<div class ="content">
+<div class ="container">  
+<h1>Question 21</h1>
+<h2>Think about yourself for a moment and then answer this question</h2> 
 <style>
 body {
     background-color:#90EE90
@@ -21,37 +22,34 @@ background: none;
 padding: 50px;
 }
 </style>
-<div> 
-<h2>Think about yourself for a while and answer a question</h2>
 <div class="container">
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest25" font="bold"style="font-size:20px; width: 100px, height:40px;">How would you describe yourself?</label>
+        <label for="quest21" font="bold"style="font-size:20px; width: 100px, height:40px;">How do you feel about yourself?</label>
       </div>
       <div class="col-75">
-        <select id="quest25" name="q25" font="bold"style="font-size:20px; width: 100px, height:40px;">
-          <option value="0">I do not feel sad</option>
-          <option value="1">I am sad all the time and I often snap</option>
-          <option value="2">I am so sad and unhappy that I can't stand it</option>
+        <select id="quest21" name="q21" font="bold"style="font-size:20px; width: 100px, height:40px;">
+          <option value="0">I do not feel like a failure</option>
+          <option value="1">As I look back on my life, all I can see is a lot of failures</option>
+          <option value="2">I feel I am a complete failure as a person</option>
         </select>
-       </div>
       </div>
-      <br>
-      <div class="row">
-        <input type="submit" value="Submit"font="bold"style="font-size:20px; width: 100px, height:40px;">
-      </div>
-     </form>
-    </div>
+     </div>
+     <br>
+     <div class="row">
+       <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
+     </div>
+    </form>
+  </div>
 </body>
 </html>
 
-
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if (isset($_POST["q25"]))
+    if (isset($_POST["q21"]))
     {
-    $q25 = $_POST['q25'];
+    $q21 = $_POST['q21'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -68,7 +66,7 @@ padding: 50px;
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question25='" . $q25 . "' " 
+        $sql = "UPDATE answers SET question21='" . $q21 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned

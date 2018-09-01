@@ -9,8 +9,8 @@
 <body>
 <div class ="content">
 <div class ="container"> 
-<h1>Question 33</h1>
-<h2>I have periods where I feel wired or hyper and I am really active</h2>
+<h1>Question 32</h1>
+<h2>There are times where I have a lot more interest in sex than at other times</h2>
 <style>
 body {
     background-color:#90EE90
@@ -26,28 +26,29 @@ padding: 50px;
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest36" font="bold"style="font-size:20px; width: 100px, height:40px;">How often do you feel as described above?</label>
+        <label for="quest32" font="bold"style="font-size:20px; width: 100px, height:40px;">How much do you relate to the statement above?</label>
       </div>
       <div class="col-75">
-        <select id="quest36" name="q36" font="bold"style="font-size:20px; width: 100px, height:40px;">
+        <select id="quest32" name="q32" font="bold"style="font-size:20px; width: 100px, height:40px;">
           <option value="0">Not at all</option>
           <option value="1">A little</option>
           <option value="2">Quite a lot</option>
         </select>
-       </div> 
+       </div>
       </div>
       <br>
       <div class="row">
         <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
       </div>
+
 </body>
 </html>
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if (isset($_POST["q36"]))
+    if (isset($_POST["q32"]))
     {
-    $q36 = $_POST['q36'];
+    $q32 = $_POST['q32'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -57,6 +58,7 @@ padding: 50px;
     $dbpassword = $db['passwd'];
     $dbtype = $db['type'];
 
+
     $username = $_SESSION["username"];
     $starttime = $_SESSION["starttime"];
     try {
@@ -64,7 +66,7 @@ padding: 50px;
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question36='" . $q36 . "' " 
+        $sql = "UPDATE answers SET question32='" . $q32 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
@@ -73,12 +75,10 @@ padding: 50px;
        // Close database connection
         $conn = null;
 
-
         if(isset($_SESSION['username'])){
           // Go to next page
           header("location: Front_End_33.php");
         }
-
     }
     catch(PDOException $e)
     {
@@ -86,6 +86,5 @@ padding: 50px;
     }
     }
 ?>
-
 
 

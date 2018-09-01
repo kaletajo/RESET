@@ -1,7 +1,6 @@
 <?php
     session_start();
 ?>
-
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,8 +8,8 @@
 <body>
 <div class ="content">
 <div class ="container"> 
-<h1>Question 36</h1>
-<h2>At times I am very sociable and other times I just want to be left alone</h2>
+<h1>Question 35</h1>
+<h2>Do you get the sense that others are controlling your thoughts and emotions?</h2>
 <style>
 body {
     background-color:#90EE90
@@ -22,34 +21,34 @@ background: none;
 padding: 50px;
 }
 </style>
+
 <div class="container">
   <form action="#" method="post">
-    <div class="row">
-      <div class="col-25">
-        <label for="quest39"font="bold" style="font-size:20px; width: 100px, height:40px;">Does the above statement reflects how you feel</label>
+  <div class="row">
+    <div class="col-25">
+      <label for="quest35"font="bold"style="font-size:20px; width: 100px, height:40px;">Select an answer</label>
     </div>
-      <div class="col-75">
-        <select id="quest39" name="q39" font="bold"style="font-size:20px; width: 100px, height:40px;">
-          <option value="0">Not at all</option>
-          <option value="1">A little</option>
-          <option value="2">Quite a lot</option>
-        </select>
-       </div>
-      </div>
-      <br>
-      <div class="row">
-        <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
-      </div>
+    <div class="col-75">
+      <select id="quest35" name="q35"font="bold"style="font-size:20px; width: 100px, height:40px;">
+        <option value="0">Never</option>
+        <option value="1">Sometimes</option>
+        <option value="2">Very often</option>
+      </select>
+     </div>
+    </div>
+    <br>
+    <div class="row">
+      <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
+    </div>
 
 </body>
 </html>
 
-
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if (isset($_POST["q39"]))
+    if (isset($_POST["q35"]))
     {
-    $q39 = $_POST['q39'];
+    $q35 = $_POST['q35'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -67,7 +66,7 @@ padding: 50px;
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question39='" . $q39 . "' " 
+        $sql = "UPDATE answers SET question35='" . $q35 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
@@ -79,8 +78,7 @@ padding: 50px;
         if(isset($_SESSION['username'])){
           // Go to next page
           header("location: Front_End_36.php");
-        }
-
+       }
     }
     catch(PDOException $e)
     {
@@ -88,5 +86,4 @@ padding: 50px;
     }
     }
 ?>
-
 

@@ -10,10 +10,7 @@
 <body>
 <div class="content">
 <div class="container">
-<h2>Question 9</h2>
-<video width="500" controls>
-  <source src="video1.mp4" type="video/mp4">
-</video>
+<h1>Question 10</h1>
 <style>
 body {
     background-color:#90EE90
@@ -25,37 +22,36 @@ background: none;
 padding: 50px;
 }
 </style>
-<h2>Watch the video carefully, you will be asked a question about the content</h2>
+<h2>Which year did the Second World War in Europe begin?</h2>
 <div class="container">
   <form action="#" method="post">
     <div class="row">
       <div class="col-25" font="bold" style="font-size:20px; width: 100px, height:40px;">
-        <label for="quest14"><b>What emotion do you see in the video</label>
+        <label for="quest10"><b>Select from one of the following answers</label>
       </div>
       <div class="col-75">
-        <select id="quest14" name="q14" font="bold" style="font-size:20px; width: 100px, height:40px;">
           <br>
-          <option value="0">Anxiety</option>
-          <option value="1">Anger</option>
-          <option value="2">Joy</option>
+        <select id="quest10" name="q10" font="bold" style="font-size:20px; width: 100px, height:40px;">
+          <option value="0">1918</option>
+          <option value="1">1939</option>
+          <option value="2">1941</option>
         </select>
-       </div>
       </div>
-      <br>
-      <div class="row">
-        <input type="submit" value="Submit" font="bold" style="font-size:20px; width: 100px, height:40px;">
-      </div>
-     </form>
     </div>
+    <br>
+    <div class="row">
+      <input type="submit" value="Submit" font="bold" style="font-size:20px; width: 100px, height:40px;">
+    </div>
+   </form>
+  </div>
 </body>
 </html>
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if (isset($_POST["q14"]))
+    if (isset($_POST["q10"]))
     {
-    echo "q14: ". $_POST['q14']. "<br />";
-    $q14 = $_POST['q14'];
+    $q10 = $_POST['q10'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -72,7 +68,7 @@ padding: 50px;
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question14='" . $q14 . "' " 
+        $sql = "UPDATE answers SET question10='" . $q10 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned

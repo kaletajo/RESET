@@ -4,18 +4,25 @@
 
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<div id="rectangle"></div>
 <head>
 <body>
-<h1>Question 2</h1>
-<h2>Read the text carefully and answer a question</h2>
-<font size="4.0"><b>The most expensive brand of coffee today on the open market is known as Kopi Luwak, or civet coffee, from Indonesia. What makes this brand of coffee unique is that is made from the coffee beans eaten by by the Asian palm civet. The civet eats the coffee berry for its fleshy pulp, along with the coffee bean inside, which is indigestible. However, while passing through the digestive system of the civet, proteolytic enzymes seep into the bean, making peptides shorter and increasing the number of free amino acids, improving the taste of the coffee bean. Similarly, due to the expensive and time-consuming process of searching for civet droppings, KOpi LUwak can be sold for up to $3000 per kilogram.
-</font>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="content">
+<div class="container">
+<h1>Question 3</h1>
+<font size ="5.0"><b>Perform Following calculations</font>
+<br>
+<br>
+<font size ="5.0"><b>2 * 3 - 1 = ?</font> 
+<br>
+<font size ="5.0"><b>15 + 16 - 7 = ?</font>
 <div class="container">
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest7"><font size="5.0"><br>Why does Civet digestion supposedly improve the coffee beans taste?</font></label>
+        <br>
+        <label for="quest3"><font size ="4.0">What are the results of both calculations?</font></label>
         <style>
         body{
         background-color:#90EE90
@@ -26,35 +33,32 @@
         background: none;
         padding: 50px;
         }
-        </style>
+       </style>
       </div>
       <div class="col-75">
       <br>
-        <select id="quest7" name="q7" font="bold" style="font-size:20px; width: 100px, height:40px;"/><br>
-          <option value="0">Lengthens coffee bean peptides</option>
-          <option value="1">Removes coffee bean peptides</option>
-          <option value="2">Shortens coffee bean peptides</option>
-          <option value="3">Inceases the number of coffee bean peptides</option>
+        <select id="quest3" name="q3" font="bold" style="font-size:20px; width: 100px, height:40px;"/>
+          <br>
+          <option value="0">5, 24</option>
+          <option value="1">4, 21</option>
         </select>
       </div>
-    </div>
-    <br>
-    <div class="row">
-      <input type="submit" value="Submit" font="bold" style="font-size:20px; width: 100px; height: 40px;">
-    </div>
-   </form>
- </div>
+     </div>
+     <div class="row">
+     <br>
+     <br>
+       <input type="submit" value ="Submit" font="bold" style="font-size:20px; width: 100px; height: 40px;">
+     </div>
+    </form>
+  </div>
 </body>
-</head>
 </html>
-
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if (isset($_POST["q7"]))
+    if (isset($_POST["q3"]))
     {
-    //echo "q7: ". $_POST['q7']. "<br />";
-    $q7 = $_POST['q7'];
+    $q3 = $_POST['q3'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -66,13 +70,12 @@
 
     $username = $_SESSION["username"];
     $starttime = $_SESSION["starttime"];
-
     try {
         $conn = new PDO("$dbtype:host=$dbservername;dbname=$dbname", $dbusername, $dbpassword);
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question7='" . $q7 . "' " 
+        $sql = "UPDATE answers SET question3='" . $q3 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
@@ -85,6 +88,7 @@
           // Go to next page
           header("location: Front_End_4.php");
         }
+
     }
     catch(PDOException $e)
     {
@@ -92,6 +96,4 @@
     }
     }
 ?>
-
-
 

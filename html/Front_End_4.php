@@ -6,59 +6,56 @@
 <html>
 <div id="rectangle"></div>
 <head>
-<body>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
 <div class="content">
 <div class="container">
-<h1>Question 3</h1>
-<font size ="5.0"><b>Perform Following calculations</font>
-<br>
-<br>
-<font size ="5.0"><b>2 * 3 - 1 = ?</font> 
-<br>
-<font size ="5.0"><b>15 + 16 - 7 = ?</font>
+<h1>Question 4</h1>
+<h2>Look at the image carefully</h2>
+<style>
+body{
+ background-color:#90EE90
+}
+.content {
+max-width: 1000px;
+margin: auto;
+background: none;
+padding: 50px;
+}
+</style>
+<img src="injustice.jpg" alt="Injustice" style="width:30%;">
 <div class="container">
   <form action="#" method="post">
     <div class="row">
-      <div class="col-25">
+      <div class="col-25" font="bold" style="font-size:20px; width: 100px, height:40px;">
         <br>
-        <label for="quest8"><font size ="4.0">What are the results of both calculations?</font></label>
-        <style>
-        body{
-        background-color:#90EE90
-        }
-        .content {
-        max-width: 1000px;
-        margin: auto;
-        background: none;
-        padding: 50px;
-        }
-       </style>
+        <label for="quest4"><b>How does this image makes you feel?</label>
       </div>
       <div class="col-75">
-      <br>
-        <select id="quest8" name="q8" font="bold" style="font-size:20px; width: 100px, height:40px;"/>
+        <select id="quest4" name="q4" font="bold" style="font-size:20px; width: 100px, height:40px;">
           <br>
-          <option value="0">5, 24</option>
-          <option value="1">4, 21</option>
+          <br>
+          <option value="0">Angry</option>
+          <option value="1">Ambivalent</option>
+          <option value="2">Makes me laugh</option>
         </select>
       </div>
-     </div>
-     <div class="row">
-     <br>
-     <br>
-       <input type="submit" value ="Submit" font="bold" style="font-size:20px; width: 100px; height: 40px;">
-     </div>
-    </form>
-  </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+      <input type="submit" value="Submit" font="bold" style="font-size:20px; width: 100px, height:40px;">
+    </div>
+   </form>
+ </div>
 </body>
 </html>
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if (isset($_POST["q8"]))
+    if (isset($_POST["q4"]))
     {
-    $q8 = $_POST['q8'];
+    $q4 = $_POST['q4'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -75,7 +72,7 @@
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question8='" . $q8 . "' " 
+        $sql = "UPDATE answers SET question4='" . $q4 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned

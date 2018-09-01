@@ -8,29 +8,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
 <div class ="content">
-<div class ="container"> 
-<h1>Question 19</h1> 
-<h2>Answer the following question.</h2> 
-<div class="container">
-  <form action="#" method="post">
-  <div class="row">
-    <div class="col-25">
-      <label for="quest22" font="bold"style="font-size:20px; width: 100px, height:40px;">How often do you worry?</label>
-    </div>
-    <div class="col-75">
-      <select id="quest22" name="q22" font="bold"style="font-size:20px; width: 100px, height:40px;">
-        <option value="0">I worry too much</option>
-        <option value="1">I do not worry much</option>
-        <option value="2">I realised that I can not influence everything</option>
-      </select>
-    </div>
-   </div>
-   <br>
-   <div class="row">
-     <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
-   </div>
-  </form>
- </div>
+<div class ="container">  
+<h1>Question 18</h1>
+<h2>Answer following question</h2>
 <style>
 body {
     background-color:#90EE90
@@ -42,14 +22,37 @@ background: none;
 padding: 50px;
 }
 </style>
+<div class="container">
+  <form action="#" method="post">
+    <div class="row">
+      <div class="col-25">
+        <label for="quest18"font="bold"style="font-size:20px; width: 100px, height:40px;">Do you hold a grief?</label>
+      </div>
+      <div class="col-75">
+        <select id="quest18" name="q18" font="bold"style="font-size:20px; width: 100px, height:40px;">
+          <br>
+          <br>
+          <option value="0">No, I do not hold a grief</option>
+          <option value="1">Yes, from a long time ago</option>
+          <option value="2">More than one</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
+    </div>
+   </form>
+  </div>
 </body>
 </html>
 
+
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if (isset($_POST["q22"]))
+    if (isset($_POST["q18"]))
     {
-    $q22 = $_POST['q22'];
+    $q18 = $_POST['q18'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -66,7 +69,7 @@ padding: 50px;
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question22='" . $q22 . "' " 
+        $sql = "UPDATE answers SET question18='" . $q18 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned

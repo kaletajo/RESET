@@ -7,10 +7,10 @@
 <div id="rectangle"></div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
-<div class="content">
-<div class="container">
-<h1>Question 12</h2>
-<h2>Look at the following series of images carefully and answer a question</h2>
+<div class ="content">
+<div class ="container">
+<h1>Question 12</h1>
+<h2>Look at the image carefully and answer a question</h2>
 <style>
 body {
     background-color:#90EE90
@@ -22,22 +22,19 @@ background: none;
 padding: 50px;
 }
 </style>
-<div> 
+<img src="scared.jpg" alt="Photo" style="width:30%;">
 <div class="container">
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest16" font="bold" style="font-size:20px; width: 100px, height:40px;">What do you see in following series of events?</label>
         <br>
-        <br>
-        <img src="photo.jpg" alt="Photo" style="width:30%;">
+        <label for="quest12"font="bold" style="font-size:20px; width: 100px, height:40px;">What emotion does the image represents?</label>
       </div>
       <div class="col-75">
-      <br>
-        <select id="quest16" name="q16" font="bold" style="font-size:20px; width: 100px, height:40px;">
-          <option value="0">A boy is looking for a butterfly and finds it</option>
-          <option value="1">A boy sees a butterfly and catches it</option>
-          <option value="2">A boy is chasing a butterfly</option>
+        <select id="quest12" name="q12" font="bold" style="font-size:20px; width: 100px, height:40px;">
+          <option value="0">Angry</option>
+          <option value="1">Happy</option>
+          <option value="2">Scared</option>
         </select>
       </div>
      </div>
@@ -49,12 +46,11 @@ padding: 50px;
    </div>
 </body>
 </html>
-
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
-    if (isset($_POST["q16"]))
+    if (isset($_POST["q12"]))
     {
-    $q16 = $_POST['q16'];
+    $q12 = $_POST['q12'];
 
     // Read database config file and set-up db connection
     $db = parse_ini_file("../../database_conf.ini");
@@ -71,7 +67,7 @@ padding: 50px;
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully"; 
-        $sql = "UPDATE answers SET question16='" . $q16 . "' " 
+        $sql = "UPDATE answers SET question12='" . $q12 . "' " 
                                . " WHERE user_id='" . $username . "' "
                                . " AND start_time ='" . $starttime . "' ";
         // use exec() because no results are returned
