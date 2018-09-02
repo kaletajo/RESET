@@ -1,4 +1,3 @@
-
 <?php
     session_start();
 ?>
@@ -11,7 +10,27 @@
 <div class ="content">
 <div class ="container"> 
 <h1>Question 15</h1> 
-<h2>Answer the following question</h2>
+<h2>Answer the following question.</h2> 
+<div class="container">
+  <form action="#" method="post">
+  <div class="row">
+    <div class="col-25">
+      <label for="quest15" font="bold"style="font-size:20px; width: 100px, height:40px;">How often do you worry?</label>
+    </div>
+    <div class="col-75">
+      <select id="quest15" name="q15" font="bold"style="font-size:20px; width: 100px, height:40px;">
+        <option value="0">I worry too much</option>
+        <option value="1">I do not worry much</option>
+        <option value="2">I realised that I can not influence everything</option>
+      </select>
+    </div>
+   </div>
+   <br>
+   <div class="row">
+     <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
+   </div>
+  </form>
+ </div>
 <style>
 body {
     background-color:#90EE90
@@ -23,30 +42,8 @@ background: none;
 padding: 50px;
 }
 </style>
-<div class="container">
-  <form action="#" method="post">
-    <div class="row">
-      <div class="col-25">
-        <label for="quest15" font="bold"style="font-size:20px; width: 100px, height:40px;">How well do you sleep at night?</label>
-      </div>
-      <div class="col-75">
-      <br>
-        <select id="quest15" name="q15" font="bold"style="font-size:20px; width: 100px, height:40px;">
-          <option value="0">I sleep 7 -8 hours</option>
-          <option value="1">I wake up everynight around 4 or 5am</option>
-          <option value="2">I have not sleep at all in last 48 hours</option>
-        </select>
-      </div>
-     </div>
-     <br>
-     <div class="row">
-       <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
-     </div>
-    </form>
-   </div>
 </body>
 </html>
-
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php

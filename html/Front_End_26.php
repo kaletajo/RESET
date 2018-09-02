@@ -6,9 +6,11 @@
 <html>
 <div id="rectangle"></div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
 <div class ="content">
 <div class ="container"> 
-<body>
+<h1>Question 26</h1>
+<h2>I have felt nervous and on edge</h2>
 <style>
 body {
     background-color:#90EE90
@@ -20,28 +22,26 @@ background: none;
 padding: 50px;
 }
 </style>
-<h1>Question 26</h1> 
-<h2>I have had stomach problems, such as feeling sick or stomach cramps</h2>
 <div class="container">
   <form action="#" method="post">
-  <div class="row">
-    <div class="col-25">
-      <label for="quest26"font="bold"style="font-size:20px; width: 100px, height:40px;">Do you agree with above statement?</label>
-    </div>
-    <div class="col-75">
-      <select id="quest26" name="q26" font="bold"style="font-size:20px; width: 100px, height:40px;">
-        <option value="0">Never</option>
-        <option value="1">Sometime</option>
-        <option value="2">Very often</option>
-     </select>
-    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="quest26" font="bold"style="font-size:20px; width: 100px, height:40px;">How does this statement relate to you</label>
+      </div>
+      <div class="col-75">
+        <select id="quest26" name="q26" font="bold"style="font-size:20px; width: 100px, height:40px;">
+          <option value="0">Never</option>
+          <option value="1">Rarely</option>
+          <option value="2">Often</option>
+        </select>
+      </div>
+     </div>
+     <br>
+     <div class="row">
+       <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
+     </div>
+    </form>
    </div>
-   <br>
-   <div class="row">
-     <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
-   </div>
-  </form>
- </div>
 </body>
 </html>
 
@@ -87,4 +87,7 @@ padding: 50px;
     }
     }
 ?>
+
+
+
 

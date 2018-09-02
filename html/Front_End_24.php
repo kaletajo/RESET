@@ -2,15 +2,12 @@
     session_start();
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <div id="rectangle"></div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <div class ="content">
 <div class ="container"> 
-<h1>Question 24</h1>
-<h2>Think about yourself for a moment and then answer this question</h2> 
 <body>
 <style>
 body {
@@ -22,30 +19,31 @@ margin: auto;
 background: none;
 padding: 50px;
 }
-</style> 
+</style>
+<h1>Question 24</h1> 
+<h2>I have had stomach problems, such as feeling sick or stomach cramps</h2>
 <div class="container">
   <form action="#" method="post">
-    <div class="row">
-      <div class="col-25">
-        <label for="quest24"font="bold"style="font-size:20px; width: 100px, height:40px;">Which statement best describes you?</label>
-      </div>
-      <div class="col-75">
-        <select id="quest24" name="q24" font="bold"style="font-size:20px; width: 100px, height:40px;">
-          <option value="0">I don't get more tired than usual</option>
-          <option value="1">I get tired more easily than I used to</option>
-          <option value="2">I get tired from doing almost anything</option>
-        </select>
-      </div>
-     </div>
-     <br>
-     <div class="row">
-       <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
-     </div>
-    </form>
+  <div class="row">
+    <div class="col-25">
+      <label for="quest24"font="bold"style="font-size:20px; width: 100px, height:40px;">Do you agree with above statement?</label>
+    </div>
+    <div class="col-75">
+      <select id="quest24" name="q24" font="bold"style="font-size:20px; width: 100px, height:40px;">
+        <option value="0">Never</option>
+        <option value="1">Sometime</option>
+        <option value="2">Very often</option>
+     </select>
+    </div>
    </div>
+   <br>
+   <div class="row">
+     <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
+   </div>
+  </form>
+ </div>
 </body>
 </html>
-
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php

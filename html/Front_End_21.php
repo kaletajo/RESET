@@ -6,11 +6,11 @@
 <html>
 <div id="rectangle"></div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<body>
 <div class ="content">
-<div class ="container">  
-<h1>Question 21</h1>
+<div class ="container"> 
+<h1>Question 21</h1> 
 <h2>Think about yourself for a moment and then answer this question</h2> 
+<body>
 <style>
 body {
     background-color:#90EE90
@@ -26,22 +26,22 @@ padding: 50px;
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest21" font="bold"style="font-size:20px; width: 100px, height:40px;">How do you feel about yourself?</label>
+        <label for="quest21" font="bold"style="font-size:20px; width: 100px, height:40px;">Which statement best describes you?</label>
       </div>
       <div class="col-75">
         <select id="quest21" name="q21" font="bold"style="font-size:20px; width: 100px, height:40px;">
-          <option value="0">I do not feel like a failure</option>
-          <option value="1">As I look back on my life, all I can see is a lot of failures</option>
-          <option value="2">I feel I am a complete failure as a person</option>
+          <option value="0">I make decisions about as well as I ever could</option>
+          <option value="1">I put off making decisions more than I used to</option>
+          <option value="2">I have greater difficulty in making decisions more than I used to</option>
         </select>
       </div>
      </div>
      <br>
      <div class="row">
-       <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
+        <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
      </div>
     </form>
-  </div>
+   </div>
 </body>
 </html>
 

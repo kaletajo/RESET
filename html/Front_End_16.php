@@ -2,19 +2,16 @@
     session_start();
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <div id="rectangle"></div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
 <div class ="content">
-<div class ="container"> 
-<h2>Question 16</h2>
-<h2>Answer the following question</h2>
+<div class ="container">  
+<h1>Question 16</h1>
+<h2>Answer following question</h2>
 <style>
-body {
-    background-color:#90EE90
-}
 body {
     background-color:#90EE90
 }
@@ -25,22 +22,21 @@ background: none;
 padding: 50px;
 }
 </style>
-<body>
-<div> 
 <div class="container">
   <form action="#" method="post">
-  <div class="row">
-    <div class="col-25">
-      <label for="quest16" font="bold"style="font-size:20px; width: 100px, height:40px;">How is your social life?</label>
-    </div>
-    <div class="col-75">
-    <br>
-      <select id="quest16" name="q16" font="bold"style="font-size:20px; width: 100px, height:40px;">
-        <option value="0">I have few good friends</option>
-        <option value="1">I do not like people</option>
-        <option value="2">I have loads of friends</option>
-      </select>
-     </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="quest16"font="bold"style="font-size:20px; width: 100px, height:40px;">Do you hold a grief?</label>
+      </div>
+      <div class="col-75">
+        <select id="quest16" name="q16" font="bold"style="font-size:20px; width: 100px, height:40px;">
+          <br>
+          <br>
+          <option value="0">No, I do not hold a grief</option>
+          <option value="1">Yes, from a long time ago</option>
+          <option value="2">More than one</option>
+        </select>
+      </div>
     </div>
     <br>
     <div class="row">

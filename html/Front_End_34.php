@@ -10,7 +10,7 @@
 <div class ="content">
 <div class ="container"> 
 <h1>Question 34</h1>
-<h2>Do you struggle to trust that what you are thinking is real?</h2>
+<h2>Do you struggle to keep up with daily living taska such as showering, changing clothes, paying bills, cleaning, cooking?</h2>
 <style>
 body {
     background-color:#90EE90
@@ -21,12 +21,12 @@ margin: auto;
 background: none;
 padding: 50px;
 }
-</style>
+</style> 
 <div class="container">
   <form action="#" method="post">
     <div class="row">
-      <div class="col-25">
-        <label for="quest34" font="bold"style="font-size:20px; width: 100px, height:34px;">Select an answer</label>
+      <div class="col-25" font="bold"style="font-size:20px; width: 100px, height:40px;">
+        <label for="quest34">Select an answer</label>
       </div>
       <div class="col-75">
         <select id="quest34" name="q34" font="bold"style="font-size:20px; width: 100px, height:40px;">
@@ -40,8 +40,10 @@ padding: 50px;
       <div class="row">
         <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
       </div>
+
 </body>
 </html>
+
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
@@ -85,4 +87,5 @@ padding: 50px;
     }
     }
 ?>
+
 

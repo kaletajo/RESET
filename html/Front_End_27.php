@@ -6,11 +6,11 @@
 <html>
 <div id="rectangle"></div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
 <div class ="content">
 <div class ="container"> 
-<body>
 <h1>Question 27</h1>
-<h2>I have felt panicked and overhelmed by things in my life</h2>
+<h2>I seem to be constantly worrying about things</h2>
 <style>
 body {
     background-color:#90EE90
@@ -26,13 +26,13 @@ padding: 50px;
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest33"font="bold"style="font-size:20px; width: 100px, height:40px;">Do you agree with above statement?</label>
+        <label for="quest27"font="bold"style="font-size:20px; width: 100px, height:40px;">How often do you feel as the person above?</label>
       </div>
       <div class="col-75">
         <select id="quest27" name="q27" font="bold"style="font-size:20px; width: 100px, height:40px;">
-          <option value="O">Never</option>
+          <option value="0">Rarely</option>
           <option value="1">Sometimes</option>
-          <option value="2">Very often</option>
+          <option value="2">Often</option>
         </select>
        </div>
       </div>
@@ -42,6 +42,8 @@ padding: 50px;
       </div>
      </form>
     </div>
+
+
 </body>
 </html>
 
@@ -87,4 +89,6 @@ padding: 50px;
     }
     }
 ?>
+
+
 

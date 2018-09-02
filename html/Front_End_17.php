@@ -1,3 +1,4 @@
+
 <?php
     session_start();
 ?>
@@ -6,31 +7,10 @@
 <html>
 <div id="rectangle"></div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<body>
 <div class ="content">
 <div class ="container"> 
-<h1>Question 17</h1> 
-<h2>Answer the following question.</h2> 
-<div class="container">
-  <form action="#" method="post">
-  <div class="row">
-    <div class="col-25">
-      <label for="quest17" font="bold"style="font-size:20px; width: 100px, height:40px;">How often do you worry?</label>
-    </div>
-    <div class="col-75">
-      <select id="quest17" name="q17" font="bold"style="font-size:20px; width: 100px, height:40px;">
-        <option value="0">I worry too much</option>
-        <option value="1">I do not worry much</option>
-        <option value="2">I realised that I can not influence everything</option>
-      </select>
-    </div>
-   </div>
-   <br>
-   <div class="row">
-     <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
-   </div>
-  </form>
- </div>
+<body>
+<h1>Question 17</h1>
 <style>
 body {
     background-color:#90EE90
@@ -41,9 +21,31 @@ margin: auto;
 background: none;
 padding: 50px;
 }
-</style>
+</style> 
+<h2>Answer following question</h2>
+<div class="container">
+  <form action="#" method="post">
+    <div class="row">
+      <div class="col-25">
+        <label for="quest17" font="bold"style="font-size:20px; width: 100px, height:40px;">Are you angry about something?</label>
+      </div>
+      <div class="col-75">
+        <select id="quest17" name="q17" font="bold"style="font-size:20px; width: 100px, height:40px;">
+          <option value="0">I never feel angry</option>
+          <option value="1">Why are you asking me this question</option>
+          <option value="2">It happened a long time ago</option>
+        </select>
+      </div>
+     </div>
+     <br>
+     <div class="row">
+       <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
+     </div>
+    </form>
+   </div>
 </body>
 </html>
+
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php

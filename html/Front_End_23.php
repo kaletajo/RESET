@@ -8,8 +8,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <div class ="content">
 <div class ="container"> 
-<h1>Question 23</h1> 
-<h2>Think about yourself for a moment and then answer this question</h2> 
 <body>
 <style>
 body {
@@ -21,29 +19,33 @@ margin: auto;
 background: none;
 padding: 50px;
 }
-</style>
+</style> 
+<h1>Question 23</h1>
+<h2>I find it very hard to unwind, relax or sit still</h2>
+<p><font size="5.0"><b>Select an answer</p></font>
 <div class="container">
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest23" font="bold"style="font-size:20px; width: 100px, height:40px;">Which statement best describes you?</label>
+        <label for="quest23" font="bold"style="font-size:20px; width: 100px, height:40px;">Do you agree with above statement</label>
       </div>
       <div class="col-75">
         <select id="quest23" name="q23" font="bold"style="font-size:20px; width: 100px, height:40px;">
-          <option value="0">I make decisions about as well as I ever could</option>
-          <option value="1">I put off making decisions more than I used to</option>
-          <option value="2">I have greater difficulty in making decisions more than I used to</option>
+          <option value="0">Never</option>
+          <option value="1">Sometimes</option>
+          <option value="2">Often</option>
         </select>
       </div>
      </div>
      <br>
      <div class="row">
-        <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
+       <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
      </div>
     </form>
    </div>
 </body>
 </html>
+
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php

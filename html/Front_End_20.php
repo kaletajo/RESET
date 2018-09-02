@@ -10,6 +10,7 @@
 <div class ="container"> 
 <body>
 <h1>Question 20</h1>
+<h2>Think about yourself for a moment and then answer this question</h2> 
 <style>
 body {
     background-color:#90EE90
@@ -21,28 +22,27 @@ background: none;
 padding: 50px;
 }
 </style>
-<div> 
-<h2>Think about yourself for a while and answer this question</h2>
 <div class="container">
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest20" font="bold"style="font-size:20px; width: 100px, height:40px;">How would you describe yourself?</label>
+        <label for="quest20"font="bold"style="font-size:20px; width: 100px, height:40px;">Which statement best describes you?</label>
+        <br>
       </div>
       <div class="col-75">
-        <select id="quest20" name="q20" font="bold"style="font-size:20px; width: 100px, height:40px;">
-          <option value="0">I do not feel sad</option>
-          <option value="1">I am sad all the time and I often snap</option>
-          <option value="2">I am so sad and unhappy that I can't stand it</option>
-        </select>
-       </div>
+       <select id="quest20" name="q20"font="bold"style="font-size:20px; width: 100px, height:40px;">
+         <option value="0">I am no more irritated by things than I ever was</option>
+         <option value="1">I am quite annoyed or irritated a good deal of the time</option>
+         <option value="2">I feel irritated all the time</option>
+       </select>
       </div>
-      <br>
-      <div class="row">
-        <input type="submit" value="Submit"font="bold"style="font-size:20px; width: 100px, height:40px;">
-      </div>
-     </form>
-    </div>
+     </div>
+     <br>
+     <div class="row">
+       <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
+     </div>
+    </form>
+   </div>
 </body>
 </html>
 

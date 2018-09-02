@@ -7,12 +7,14 @@
 <html>
 <div id="rectangle"></div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<body>
 <div class ="content">
 <div class ="container"> 
-<h1>Question 14</h1>
-<h2>Look at the object and answer a question</h2>
+<h2>Question 14</h2>
+<h2>Answer the following question</h2>
 <style>
+body {
+    background-color:#90EE90
+}
 body {
     background-color:#90EE90
 }
@@ -23,28 +25,32 @@ background: none;
 padding: 50px;
 }
 </style>
+<body>
+<div> 
 <div class="container">
   <form action="#" method="post">
-    <div class="row">
-      <div class="col-25">
-        <label for="quest14" font="bold"style="font-size:20px; width: 100px, height:40px;">Which direction is the object moving in?</label>
-      </div>
-      <div class="col-75">
-        <select is="quest14" name="q14" font="bold" style="font-size:20px; width: 100px, height:40px;">
-          <option value="0">Right and then left </option>
-          <option value="1">Left</option>
-          <option value="2">Left and then right</option>
-        </select>     
-       </div>
-      </div>
-      <br>
-      <div class="row">
-        <input type="submit" value="Submit"font="bold" style="font-size:20px; width: 100px, height:40px;">
-      </div>
-     </form>
+  <div class="row">
+    <div class="col-25">
+      <label for="quest14" font="bold"style="font-size:20px; width: 100px, height:40px;">How is your social life?</label>
     </div>
+    <div class="col-75">
+    <br>
+      <select id="quest14" name="q14" font="bold"style="font-size:20px; width: 100px, height:40px;">
+        <option value="0">I have few good friends</option>
+        <option value="1">I do not like people</option>
+        <option value="2">I have loads of friends</option>
+      </select>
+     </div>
+    </div>
+    <br>
+    <div class="row">
+      <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
+    </div>
+   </form>
+  </div>
 </body>
 </html>
+
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php

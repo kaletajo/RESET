@@ -1,4 +1,3 @@
-
 <?php
     session_start();
 ?>
@@ -7,10 +6,11 @@
 <html>
 <div id="rectangle"></div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<div class ="content">
-<div class ="container"> 
 <body>
+<div class ="content">
+<div class ="container">  
 <h1>Question 19</h1>
+<h2>Think about yourself for a moment and then answer this question</h2> 
 <style>
 body {
     background-color:#90EE90
@@ -21,19 +21,18 @@ margin: auto;
 background: none;
 padding: 50px;
 }
-</style> 
-<h2>Answer following question</h2>
+</style>
 <div class="container">
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest19" font="bold"style="font-size:20px; width: 100px, height:40px;">Are you angry about something?</label>
+        <label for="quest19" font="bold"style="font-size:20px; width: 100px, height:40px;">How do you feel about yourself?</label>
       </div>
       <div class="col-75">
         <select id="quest19" name="q19" font="bold"style="font-size:20px; width: 100px, height:40px;">
-          <option value="0">I never feel angry</option>
-          <option value="1">Why are you asking me this question</option>
-          <option value="2">It happened a long time ago</option>
+          <option value="0">I do not feel like a failure</option>
+          <option value="1">As I look back on my life, all I can see is a lot of failures</option>
+          <option value="2">I feel I am a complete failure as a person</option>
         </select>
       </div>
      </div>
@@ -42,10 +41,9 @@ padding: 50px;
        <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
      </div>
     </form>
-   </div>
+  </div>
 </body>
 </html>
-
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php

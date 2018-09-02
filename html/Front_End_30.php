@@ -4,13 +4,13 @@
 
 <!DOCTYPE html>
 <html>
-<div id="rectangle"></div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<div id="rectangle"></div>
 <body>
 <div class ="content">
 <div class ="container"> 
 <h1>Question 30</h1>
-<h2>Sometimes I am much more talkative than at other times</h2>
+<h2>There are times where I have a lot more interest in sex than at other times</h2>
 <style>
 body {
     background-color:#90EE90
@@ -26,12 +26,12 @@ padding: 50px;
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest30" font="bold"style="font-size:20px; width: 100px, height:40px;">How do you relate to the above statement?</label>
+        <label for="quest30" font="bold"style="font-size:20px; width: 100px, height:40px;">How much do you relate to the statement above?</label>
       </div>
       <div class="col-75">
         <select id="quest30" name="q30" font="bold"style="font-size:20px; width: 100px, height:40px;">
           <option value="0">Not at all</option>
-          <option value="1">Often</option>
+          <option value="1">A little</option>
           <option value="2">Quite a lot</option>
         </select>
        </div>
@@ -40,6 +40,7 @@ padding: 50px;
       <div class="row">
         <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
       </div>
+
 </body>
 </html>
 
@@ -78,7 +79,6 @@ padding: 50px;
           // Go to next page
           header("location: Front_End_31.php");
         }
-
     }
     catch(PDOException $e)
     {

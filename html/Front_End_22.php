@@ -2,15 +2,16 @@
     session_start();
 ?>
 
+
 <!DOCTYPE html>
 <html>
 <div id="rectangle"></div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <div class ="content">
 <div class ="container"> 
-<body>
 <h1>Question 22</h1>
 <h2>Think about yourself for a moment and then answer this question</h2> 
+<body>
 <style>
 body {
     background-color:#90EE90
@@ -21,20 +22,19 @@ margin: auto;
 background: none;
 padding: 50px;
 }
-</style>
+</style> 
 <div class="container">
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
         <label for="quest22"font="bold"style="font-size:20px; width: 100px, height:40px;">Which statement best describes you?</label>
-        <br>
       </div>
       <div class="col-75">
-       <select id="quest22" name="q22"font="bold"style="font-size:20px; width: 100px, height:40px;">
-         <option value="0">I am no more irritated by things than I ever was</option>
-         <option value="1">I am quite annoyed or irritated a good deal of the time</option>
-         <option value="2">I feel irritated all the time</option>
-       </select>
+        <select id="quest22" name="q22" font="bold"style="font-size:20px; width: 100px, height:40px;">
+          <option value="0">I don't get more tired than usual</option>
+          <option value="1">I get tired more easily than I used to</option>
+          <option value="2">I get tired from doing almost anything</option>
+        </select>
       </div>
      </div>
      <br>

@@ -1,3 +1,4 @@
+
 <?php
     session_start();
 ?>
@@ -8,9 +9,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
 <div class ="content">
-<div class ="container">
-<h1>Question 13</h1>
-<h2>Look at the video and answer a question</h2>
+<div class ="container"> 
+<h1>Question 13</h1> 
+<h2>Answer the following question</h2>
 <style>
 body {
     background-color:#90EE90
@@ -22,29 +23,27 @@ background: none;
 padding: 50px;
 }
 </style>
-<img src="scared.jpg" alt="Photo" style="width:30%;">
 <div class="container">
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-      <br>
-        <label for="quest13"font="bold" style="font-size:20px; width: 100px, height:40px;">What do you see in the video</label>
+        <label for="quest13" font="bold"style="font-size:20px; width: 100px, height:40px;">How well do you sleep at night?</label>
       </div>
       <div class="col-75">
       <br>
-        <select id="quest13" name="q13"font="bold" style="font-size:20px; width: 100px, height:40px;">
-          <option value="0">A policeman gets shot</option>
-          <option value="1">A policeman gets what he deserves</option>
-          <option value="2">God takes policeman soul</option>
+        <select id="quest13" name="q13" font="bold"style="font-size:20px; width: 100px, height:40px;">
+          <option value="0">I sleep 7 -8 hours</option>
+          <option value="1">I wake up everynight around 4 or 5am</option>
+          <option value="2">I have not sleep at all in last 48 hours</option>
         </select>
       </div>
-    </div>
-    <br>
-    <div class="row">
-      <input type="submit" value="Submit"font="bold" style="font-size:20px; width: 100px, height:40px;">
-    </div>
-   </form>
-  </div>
+     </div>
+     <br>
+     <div class="row">
+       <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
+     </div>
+    </form>
+   </div>
 </body>
 </html>
 

@@ -10,7 +10,7 @@
 <div class ="content">
 <div class ="container"> 
 <h1>Question 32</h1>
-<h2>There are times where I have a lot more interest in sex than at other times</h2>
+<h2>Do you struggle to trust that what you are thinking is real?</h2>
 <style>
 body {
     background-color:#90EE90
@@ -26,13 +26,13 @@ padding: 50px;
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest32" font="bold"style="font-size:20px; width: 100px, height:40px;">How much do you relate to the statement above?</label>
+        <label for="quest32" font="bold"style="font-size:20px; width: 100px, height:34px;">Select an answer</label>
       </div>
       <div class="col-75">
         <select id="quest32" name="q32" font="bold"style="font-size:20px; width: 100px, height:40px;">
-          <option value="0">Not at all</option>
-          <option value="1">A little</option>
-          <option value="2">Quite a lot</option>
+          <option value="0">Never</option>
+          <option value="1">Sometimes</option>
+          <option value="2">Very often</option>
         </select>
        </div>
       </div>
@@ -40,7 +40,6 @@ padding: 50px;
       <div class="row">
         <input type="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;">
       </div>
-
 </body>
 </html>
 
@@ -86,5 +85,4 @@ padding: 50px;
     }
     }
 ?>
-
 
