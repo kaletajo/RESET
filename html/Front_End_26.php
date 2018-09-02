@@ -20,7 +20,7 @@ background: none;
 padding: 50px;
 }
 </style>
-<h1>Question 28</h1> 
+<h1>Question 26</h1> 
 <h2>I have had stomach problems, such as feeling sick or stomach cramps</h2>
 <div class="container">
   <form action="#" method="post">
