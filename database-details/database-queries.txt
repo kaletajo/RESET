@@ -1,12 +1,14 @@
 
 
+CREATE DATABASE IF NOT EXISTS resetdb;
+
 -- set to database
 use resetdb;
 
 DROP TABLE answers;
 
--- create table to store answers from a session
-CREATE TABLE answers (
+-- create table to store answers from each session
+CREATE TABLE IF NOT EXISTS answers (
  user_id VARCHAR(100) NOT NULL,
  start_time DATETIME NOT NULL,
  question1 VARCHAR(10) NOT NULL,
@@ -69,151 +71,83 @@ CREATE TABLE answers (
  question58 VARCHAR(10) NOT NULL,
  question59 VARCHAR(10) NOT NULL,
  question60 VARCHAR(10) NOT NULL
+ anxiety_total FLOAT NOT NULL,
+ depression_total FLOAT NOT NULL,
+ psychosis_total FLOAT NOT NULL
  );
 
 
 
-SHOW TABLES;
+DROP TABLE points;
 
---  create table to allocate points 'scored' fort each question
-create table POINTS (
-Q_num integer NOT NULL,
-answer_0 VARCHAR(10),
-answer_1 VARCHAR(10),
-answer_2 VARCHAR(10),
-answer_3 VARCHAR(10)
+
+--  Create table to allocate points 'scored' for each possible answer to each question
+--  Each question has a max of 5 possible answers, and will have only 1 answer
+CREATE TABLE IF NOT EXISTS points (
+    Q_num integer NOT NULL,
+    answer_0 VARCHAR(10),
+    answer_1 VARCHAR(10),
+    answer_2 VARCHAR(10),
+    answer_3 VARCHAR(10),
+    answer_4 VARCHAR(10),
+    CONSTRAINT qnum_constraint UNIQUE (Q_num)
 );
 
+SHOW TABLES;
 
-INSERT INTO POINTS(
-Q_num,answer_0,answer_1,answer_2,answer_3)
-VALUES("6",NULL,"S1",NULL,NULL);
 
-INSERT INTO POINTS(
-Q_num,answer_0,answer_1,answer_2,answer_3)
-VALUES("8",NULL,"S1",NULL,NULL);
-
-INSERT INTO POINTS(
-Q_num,answer_0,answer_1,answer_2,answer_3)
-VALUES("9",NULL,"D1","PD1",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("10",NULL,"D1","S1",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("11",NULL,"S1","S1",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("13","D1","A1",NULL,NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("14",NULL,"A1","S1",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("15","S1",NULL,"S1",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("21",NULL,"D1","S1",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("22",NULL,"PD1","A1",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("23","A1",NULL,"D1",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("24",NULL,"D1","D1",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("25","PD1","A1","D1",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("26",NULL,"D1","D2",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("27",NULL,"D1","D2",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("28",NULL,"A1","A2",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("29",NULL,"D1","D2",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("30",NULL,"D1","D2",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("31",NULL,"A1","A2",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("32",NULL,"A1","A2",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("33",NULL,"A1","A2",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("34",NULL,"A1","A2",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("35",NULL,"D1","D2",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("36",NULL,"A1","A2",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("37",NULL,"A1","A2",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("38",NULL,"S1","S2",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("39",NULL,"S1","S2",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("40",NULL,"S1","S2",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("41",NULL,"S1","S2",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("42",NULL,"S1","S2",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("43",NULL,"S1","S2",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("44",NULL,"S1","S2",NULL);
-
-INSERT INTO POINTS(
-Q_NUM,answer_0,answer_1,answer_2,answer_3)
-VALUES("45",NULL,"S1","S2",NULL);
+-- Insert values for points look-up table
+INSERT INTO points (Q_num, answer_0, answer_1, answer_2, answer_3, answer_4)
+VALUES
+    ("1", "D+2,P+2", NULL, NULL, NULL, NULL),
+    ("2", "D+1,P+3", "D+1,P+3", NULL, "D+1,P+3", NULL),
+    ("3",  NULL, "D+1,P+3", NULL, NULL, NULL),
+    ("4",  "A+1", "D+1", "P+1", NULL, NULL),
+    ("5",  NULL, "D+2", "P+3", NULL, NULL),
+    ("6",  NULL, "D+1,P+2", "D+1,P+2", NULL, NULL),
+    ("7",  "P+1", "D+1", "A+1", NULL, NULL),
+    ("8",  "D+2", "A+2", "P+1", NULL, NULL),
+    ("9",  NULL, "D+1,P+2", "D+1,P+2", NULL, NULL),
+    ("10", "D+1,P+2", NULL, "D+1,P+2", NULL, NULL),
+    ("11", "P+1", NULL, "P+1", NULL, NULL),
+    ("12", "D+1,P+2", "D+1,P+2", NULL, NULL, NULL),
+    ("13", NULL, "A+1,D+1", "P+1", NULL, NULL),
+    ("14", NULL, NULL, NULL, NULL, NULL),
+    ("15", NULL, "D+2", "P+3", NULL, NULL),
+    ("16", NULL, "P+2", "P+1", NULL, NULL),
+    ("17", "A+2,D+1", "P+1", NULL, NULL, NULL),
+    ("18", NULL, "D+1", "A+1", NULL, NULL),
+    ("19", "P+1", "A+1", "D+1", NULL, NULL),
+    ("20", NULL, "D+1", "A+1", NULL, NULL),
+    ("21", NULL, "D+1", "D+2", NULL, NULL),
+    ("22", NULL, "A+1", "A+2", NULL, NULL),
+    ("23", NULL, "D+1", "D+2", NULL, NULL),
+    ("24", NULL, "D+1", "D+2", NULL, NULL),
+    ("25", NULL, "A+1", "A+2", NULL, NULL),
+    ("26", NULL, "A+1", "A+2", NULL, NULL),
+    ("27", NULL, "A+1", "A+2", NULL, NULL),
+    ("28", "P+1", "A+1", "A+2", NULL, NULL),
+    ("29", NULL, "A+1,D+1", "A+1,D+1", NULL, NULL),
+    ("30", NULL, "P+1", "P+2", NULL, NULL),
+    ("31", NULL, "A+1", "A+2", NULL, NULL),
+    ("32", NULL, "D+1", "D+2", NULL, NULL),
+    ("33", NULL, "D+1", "D+2", NULL, NULL),
+    ("34", NULL, "P+1", "P+2", NULL, NULL),
+    ("35", NULL, "P+1", "P+2", NULL, NULL),
+    ("36", NULL, "P+1", "P+2", NULL, NULL),
+    ("37", NULL, "P+1", "P+2", NULL, NULL)
+    ;
  
+
+
+-- TO DO 
+-- FE 41  iv1    OK
+-- FE 43  iv2    OK 
+-- FE 45  iv3    ok
+-- FE 46  iv4    ok 
+-- FE 47  iv5    ok
+-- FE 57  iv6    ok 
+-- FE 60  iv7    ok 
+
+
+
