@@ -1,5 +1,5 @@
 <?php
- include('login.php'); // Includes Login Script
+  include('login.php'); // Includes Login Script
 
   if(isset($_SESSION['username'])){
     // Go to next page

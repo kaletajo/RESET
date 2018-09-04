@@ -1,3 +1,8 @@
+<?php
+    session_start();
+?>
+
+
 <!DOCTYPE html>
 <html>
 <div id="rectangle"></div>
@@ -23,16 +28,16 @@ padding: 50px;
   <input type="file" name="file" id="file" font="bold"style="font-size:20px; width: 100px, height:40px;"/> 
   <br />
   <input type="submit" name="submit" value="Submit"font="bold"style="font-size:20px; width: 100px, height:40px;"/>
+  <input type="hidden" id="qId" name="qId" value="question39">
 </form>
 
-<!--
-<form action="upload.php" method="post" enctype="multipart/form-data">
-  <input type="file" name="fileToUpload" id="fileToUpload">
-  <input type="submit" value="Upload Image" name="submit">
-</form>
--->
 
 </body>
 </html>
 
+
+<!-- This code executes when the FORM is submitted using POST method -->
+<?php
+    $_SESSION["next_page"] = "iv5.php";
+?>
 

@@ -93,6 +93,9 @@
             {
                 echo "Connection failed: " . $e->getMessage();
             }
+
+            // Clean up files
+            shell_exec("rm " . $target_dir . "*");
             
 
             // 4. Go to next page
