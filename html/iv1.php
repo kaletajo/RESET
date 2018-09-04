@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">  
@@ -6,8 +10,8 @@
 <div class ="container"> 
 <body>
 <h2>Interactive Question 1</h2>
-<p><font size ="5.0"><strong>Tell me how it was for you growing up?</strong></p></font>
-<p><font size ="5.0">Upload a video up to one minute long below</p></font>
+<p><font size ="5.0"><strong>How things were for you when you were growing up?</strong></p></font>
+<p><font size ="5.0">(Answer question on video and upload video - up to one minute long)</p></font>
 <style>
 body {
     background-color:#90EE90
@@ -26,13 +30,15 @@ padding: 50px;
   <input type="submit" name="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;" />
 </form>
 
-<!--
-<form action="upload.php" method="post" enctype="multipart/form-data">
-  <input type="file" name="fileToUpload" id="fileToUpload">
-  <input type="submit" value="Upload Image" name="submit">
-</form>
--->
 
 </body>
 </html>
+
+
+<!-- This code executes when the FORM is submitted using POST method -->
+<?php
+    $_SESSION["next_page"] = "iv2.php";
+?>
+
+
 
