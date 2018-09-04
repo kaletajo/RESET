@@ -46,31 +46,13 @@ CREATE TABLE IF NOT EXISTS answers (
  question33 VARCHAR(10) NOT NULL,
  question34 VARCHAR(10) NOT NULL,
  question35 VARCHAR(10) NOT NULL,
- question36 VARCHAR(10) NOT NULL,
- question37 VARCHAR(10) NOT NULL,
- question38 VARCHAR(10) NOT NULL,
- question39 VARCHAR(10) NOT NULL,
- question40 VARCHAR(10) NOT NULL,
- question41 VARCHAR(10) NOT NULL,
- question42 VARCHAR(10) NOT NULL,
- question43 VARCHAR(10) NOT NULL,
- question44 VARCHAR(10) NOT NULL,
- question45 VARCHAR(10) NOT NULL,
- question46 VARCHAR(10) NOT NULL,
- question47 VARCHAR(10) NOT NULL,
- question48 VARCHAR(10) NOT NULL,
- question49 VARCHAR(10) NOT NULL,
- question50 VARCHAR(10) NOT NULL,
- question51 VARCHAR(10) NOT NULL,
- question52 VARCHAR(10) NOT NULL,
- question53 VARCHAR(10) NOT NULL,
- question54 VARCHAR(10) NOT NULL,
- question55 VARCHAR(10) NOT NULL,
- question56 VARCHAR(10) NOT NULL,
- question57 VARCHAR(10) NOT NULL,
- question58 VARCHAR(10) NOT NULL,
- question59 VARCHAR(10) NOT NULL,
- question60 VARCHAR(10) NOT NULL
+ question36 VARCHAR(200) NOT NULL,
+ question37 VARCHAR(200) NOT NULL,
+ question38 VARCHAR(200) NOT NULL,
+ question39 VARCHAR(200) NOT NULL,
+ question40 VARCHAR(200) NOT NULL,
+ question41 VARCHAR(200) NOT NULL,
+ question42 VARCHAR(200) NOT NULL,
  anxiety_total FLOAT NOT NULL,
  depression_total FLOAT NOT NULL,
  psychosis_total FLOAT NOT NULL
@@ -136,16 +118,3 @@ VALUES
     ("35", NULL, "P+1", "P+2", NULL, NULL)
     ;
  
-
-
--- TO DO 
--- FE 41  iv1    OK
--- FE 43  iv2    OK 
--- FE 45  iv3    ok
--- FE 46  iv4    ok 
--- FE 47  iv5    ok
--- FE 57  iv6    ok 
--- FE 60  iv7    ok 
-
-
-
