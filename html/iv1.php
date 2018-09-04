@@ -10,7 +10,7 @@
 <div class ="container"> 
 <body>
 <h2>Interactive Question 1</h2>
-<p><font size ="5.0"><strong>How things were for you when you were growing up?</strong></p></font>
+<p><font size ="5.0"><strong>How were things for you when you were growing up?</strong></p></font>
 <p><font size ="5.0">(Answer question on video and upload video - up to one minute long)</p></font>
 <style>
 body {
@@ -28,6 +28,7 @@ padding: 50px;
   <input type="file" name="file" id="file" font="bold" style="font-size:20px; width: 100px, height:40px;"/> 
   <br />
   <input type="submit" name="submit" value="Submit" font="bold"style="font-size:20px; width: 100px, height:40px;" />
+  <input type="hidden" id="qId" name="qId" value="question36">
 </form>
 
 
