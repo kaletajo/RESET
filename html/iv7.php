@@ -38,6 +38,7 @@ padding: 50px;
 
 <!-- This code executes when the FORM is submitted using POST method -->
 <?php
+    $_SESSION["qId"] = "question42";
     $_SESSION["next_page"] = "summary.php";
 ?>
 
