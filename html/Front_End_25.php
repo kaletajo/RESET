@@ -30,7 +30,7 @@ padding: 50px;
       </div>
       <div class="col-75">
         <select id="quest25" name="q25" font="bold"style="font-size:20px; width: 100px, height:40px;">
-          <option value="O">Never</option>
+          <option value="0">Never</option>
           <option value="1">Sometimes</option>
           <option value="2">Very often</option>
         </select>
