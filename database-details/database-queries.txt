@@ -7,7 +7,7 @@ use resetdb;
 
 DROP TABLE answers;
 
--- create table to store answers from each session
+-- create table to store answers from each user session
 CREATE TABLE IF NOT EXISTS answers (
  user_id VARCHAR(100) NOT NULL,
  start_time DATETIME NOT NULL,
