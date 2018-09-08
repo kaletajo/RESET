@@ -8,8 +8,8 @@
 <div class ="content">
 <div class ="container"> 
 <body>
-<h2>Interactive Question 5</h2>
-<p><font size ="5.0"><strong>How do you see your future?</strong></p></font>
+<h2><u>Interactive Question 5</u></h2>
+<p><font size ="5.0"><strong>How do you see your future? In the short term? In the long term?</strong></p></font>
 <p><font size ="5.0">Upload a video up to one minute long below</p></font>
 <style>
 body {

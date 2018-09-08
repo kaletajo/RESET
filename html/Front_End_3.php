@@ -11,7 +11,7 @@
 <div class="content">
 <div class="container">
 <h1>Question 3</h1>
-<font size ="5.0"><b>Perform Following calculations</font>
+<font size ="5.0"><b>Perform the following calculations</font>
 <br>
 <br>
 <font size ="5.0"><b>2 * 3 - 1 = ?</font> 

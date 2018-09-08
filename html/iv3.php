@@ -9,8 +9,9 @@
 <div class ="content">
 <div class ="container"> 
 <body>
-<h2>Interactive Question 3</h2>
-<p><font size ="5.0"><strong>Do you hear voices or sounds other people around you do not seem to hear?What do they usually say?Can you give me an example?</strong></p></font>
+<h2><u>Interactive Question 3</u></h2>
+<p><font size ="5.0"><strong>Do you hear voices or sounds other people around you do not seem to hear? <br>
+What do they usually say? Can you give me an example?</strong></p></font>
 <p><font size ="5.0">Upload a video up to one minute long below</p></font>
 <style>
 body {

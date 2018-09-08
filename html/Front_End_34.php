@@ -10,7 +10,7 @@
 <div class ="content">
 <div class ="container"> 
 <h1>Question 34</h1>
-<h2>Do you struggle to keep up with daily living taska such as showering, changing clothes, paying bills, cleaning, cooking?</h2>
+<h2>Do you struggle to keep up with daily living tasks such as showering, changing clothes, paying bills, cleaning, cooking and so on?</h2>
 <style>
 body {
     background-color:#90EE90

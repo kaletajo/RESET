@@ -8,7 +8,7 @@
 <head>
 <body>
 <h1>Question 2</h1>
-<h2>Read the text carefully and answer the question</h2>
+<h2>Read the text carefully and then answer the question</h2>
 <font size="4.0"><b>The most expensive brand of coffee today on the open market is known as Kopi Luwak, or civet coffee, from Indonesia. What makes this brand of coffee unique is that is made from the coffee beans eaten by by the Asian palm civet. The civet eats the coffee berry for its fleshy pulp, along with the coffee bean inside, which is indigestible. However, while passing through the digestive system of the civet, proteolytic enzymes seep into the bean, making peptides shorter and increasing the number of free amino acids, improving the taste of the coffee bean. Similarly, due to the expensive and time-consuming process of searching for civet droppings, Kopi Luwak can be sold for up to $3000 per kilogram.
 </font>
 <div class="container">

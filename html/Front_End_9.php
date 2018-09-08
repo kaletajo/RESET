@@ -30,7 +30,7 @@ padding: 50px;
   <form action="#" method="post">
     <div class="row">
       <div class="col-25" font="bold" style="font-size:20px; width: 100px, height:40px;">
-        <label for="quest9"><b>What emotion do you see in the video?</label>
+        <label for="quest9"><b>What emotion do you see most of in the video?</label>
       </div>
       <div class="col-75">
         <select id="quest9" name="q9" font="bold" style="font-size:20px; width: 100px, height:40px;">

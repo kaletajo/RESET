@@ -9,7 +9,7 @@
 <div class ="content">
 <div class ="container"> 
 <body>
-<h2>Interactive Question 2</h2>
+<h2><u>Interactive Question 2</u></h2>
 <p><font size ="5.0"><strong>Tell me about how you sleep normally.</strong></p></font>
 <p><font size ="5.0">Upload a video up to one minute long below</p></font>
 <style>

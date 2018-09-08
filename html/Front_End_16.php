@@ -26,13 +26,13 @@ padding: 50px;
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest16"font="bold"style="font-size:20px; width: 100px, height:40px;">Do you hold a grief?</label>
+        <label for="quest16"font="bold"style="font-size:20px; width: 100px, height:40px;">Do you hold any grief?</label>
       </div>
       <div class="col-75">
         <select id="quest16" name="q16" font="bold"style="font-size:20px; width: 100px, height:40px;">
           <br>
           <br>
-          <option value="0">No, I do not hold a grief</option>
+          <option value="0">No, I do not hold any grief</option>
           <option value="1">Yes, from a long time ago</option>
           <option value="2">More than one</option>
         </select>

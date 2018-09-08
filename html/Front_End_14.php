@@ -31,7 +31,7 @@ padding: 50px;
   <form action="#" method="post">
   <div class="row">
     <div class="col-25">
-      <label for="quest14" font="bold"style="font-size:20px; width: 100px, height:40px;">How is your social life?</label>
+      <label for="quest14" font="bold"style="font-size:20px; width: 100px, height:40px;">How would you describe your social life?</label>
     </div>
     <div class="col-75">
     <br>

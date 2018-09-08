@@ -10,7 +10,7 @@
 <div class ="content">
 <div class ="container"> 
 <h1>Question 29</h1>
-<h2>I have periods where I feel wired or hyper and I am really active</h2>
+<h2>I have periods where I feel energetic or 'hyper' and I am really active</h2>
 <style>
 body {
     background-color:#90EE90

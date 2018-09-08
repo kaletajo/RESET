@@ -2,14 +2,12 @@
     session_start();
 
 
-    //  Main scoring functions.
-    //  Run scoring function - produce report
+    //  Run main scoring function - produce summary report
 
     $username = $_SESSION["username"];
     $starttime = $_SESSION["starttime"];
 
     $qId = $_SESSION["qId"];
-    //$qId = "question42";
     $numberOfQuestions = str_replace("question", "", $qId);
 
 
@@ -122,16 +120,16 @@ function calculateScores($numberOfQuestions,$answers, $points, $totals) {
         if ($i >= 2) {
             $userAnswer = $aArray[$i];
             $qnum = $i-1;
-            echo $qnum . ". userAnswer => " . $userAnswer . "\xA";
+            //echo $qnum . ". userAnswer => " . $userAnswer . "\xA";
             $pointsRow = getPointsRowByQuestion($points, $qnum);
             $pointsStr = getAnswerFromPointsRow($pointsRow, $userAnswer);
-            echo " pointsStr => " . $pointsStr . "\xA";
+            //echo " pointsStr => " . $pointsStr . "\xA";
 
             if (strlen($userAnswer) > 10) {   // Must be answer to interactive question
                 $totals = parseInteractivePointsStr($userAnswer, $totals);
             }
             elseif ($pointsStr == NULL) {     // Must be multi-choice question
-                echo "pointsStr is NULL" . "\xA";
+                // echo "pointsStr is NULL" . "\xA";
             }
             else {
                 $totals = parsePointsStr($pointsStr, $totals);
@@ -142,12 +140,8 @@ function calculateScores($numberOfQuestions,$answers, $points, $totals) {
     return $totals;
 }
 
-//echo "POINTS -------------------------------------------------------------------" . "\xA";
-//print_r($points);
-//echo "ANSWERS-------------------------------------------------------------------" . "\xA";
-//print_r($answers);
-//echo "-------------------------------------------------------------------" . "\xA";
 
+// Start processing
 
 $points = readData("SELECT * FROM points ORDER BY Q_num ASC");
 $sql = "SELECT * FROM answers  WHERE user_id='" 
@@ -164,23 +158,55 @@ $totals = array($anxiety_score, $depression_score, $psychotic_score);
 $totals = calculateScores($numberOfQuestions, $answers, $points, $totals);
 
 
-echo "---------------------------------" . "\xA";
-echo "anxiety score = " . $totals[0] . "\xA";
-echo "depression score = " . $totals[1] . "\xA";
-echo "psychosis score = " . $totals[2] . "\xA";
+#echo "---------------------------------" . "\xA";
+#echo "anxiety score = " . $totals[0] . "\xA";
+#echo "depression score = " . $totals[1] . "\xA";
+#echo "psychosis score = " . $totals[2] . "\xA";
 
 ?>
 
 
+
+
+
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+
+body{
+    background-color:#90EE90
+    }
+.content {
+    max-width: 1000px;
+    margin: auto;
+    background: none;
+    padding: 50px;
+    }
+td {
+    text-align: center;
+}
+</style>
+
+</head>
+
 <body>
 
-<h1>Summary</h1>
+<h1>RESET Session Summary</h1>
 
-Report Summary
+<b>Summary Report</b>
+<br>
+<br>
+<?php
+echo "<b>Session completed: " . date("Y-m-d") .  " " . date("h:i:sa") . "</b>";
+?>
+<br>
+<br>
 
-<table style="width:100%">
+<table style="width:50%"> 
   <tr>
     <th>Condition</th>
     <th>Measurement</th>
@@ -213,10 +239,10 @@ Report Summary
 <!-- Logout and finish -->
 <?php
     // remove all session variables
-    session_unset(); 
+//    session_unset(); 
 
     // destroy the session 
-    session_destroy(); 
+//    session_destroy(); 
 
     //header("location: index.php");
 ?>

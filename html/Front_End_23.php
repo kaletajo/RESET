@@ -21,13 +21,13 @@ padding: 50px;
 }
 </style> 
 <h1>Question 23</h1>
-<h2>I find it very hard to unwind, relax or sit still</h2>
-<p><font size="5.0"><b>Select an answer</p></font>
+<h2>I find it very hard to unwind, relax or sit still.</h2>
+
 <div class="container">
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest23" font="bold"style="font-size:20px; width: 100px, height:40px;">Do you agree with above statement</label>
+        <label for="quest23" font="bold"style="font-size:20px; width: 100px, height:40px;">Do you agree with above statement?</label>
       </div>
       <div class="col-75">
         <select id="quest23" name="q23" font="bold"style="font-size:20px; width: 100px, height:40px;">

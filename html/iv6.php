@@ -9,8 +9,8 @@
 <div class ="content">
 <div class ="container"> 
 <body>
-<h2>Interactive Question 6</h2>
-<p><font size ="5.0"><strong>Describe a stressful event that took place in your life.Tell me how did it make you feel.</strong></p>
+<h2><u>Interactive Question 6</u></h2>
+<p><font size ="5.0"><strong>Describe a stressful event that took place in your life. Tell me how did it make you feel.</strong></p>
 <p><font size ="5.0">Upload a video up to one minute long below</p></font>
 <style>
 body {

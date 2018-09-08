@@ -15,7 +15,7 @@
   <form action="#" method="post">
   <div class="row">
     <div class="col-25">
-      <label for="quest15" font="bold"style="font-size:20px; width: 100px, height:40px;">How often do you worry?</label>
+      <label for="quest15" font="bold"style="font-size:20px; width: 100px, height:40px;">How much do you worry?</label>
     </div>
     <div class="col-75">
       <select id="quest15" name="q15" font="bold"style="font-size:20px; width: 100px, height:40px;">

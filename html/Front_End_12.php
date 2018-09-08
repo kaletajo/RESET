@@ -28,7 +28,7 @@ padding: 50px;
     <div class="row">
       <div class="col-25">
         <br>
-        <label for="quest12"font="bold" style="font-size:20px; width: 100px, height:40px;">What emotion does the image represents?</label>
+        <label for="quest12"font="bold" style="font-size:20px; width: 100px, height:40px;">What emotion does the image represent?</label>
       </div>
       <div class="col-75">
         <select id="quest12" name="q12" font="bold" style="font-size:20px; width: 100px, height:40px;">
