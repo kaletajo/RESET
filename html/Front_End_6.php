@@ -8,7 +8,7 @@
 <h2>Question 6</h2>
 <body>
 <div class="col-25" font="bold" style="font-size:20px; width: 100px, height:40px;"><b>
-Europa is the sixth closest moon of the planet Jupiter, and one of the largest moons in the solar system. Europa is slightly smaller that the Earth's moon and has a tenuous atmosphere composed primarily of oxygen. The surface of Europa is composed of water and it is one of the smoothest in the solar system. Scientists suggest that it is possible Europa has an ocean of liquid water beneath it's surface, making it a strong candidate for extra-terrestrial life. It is also predicted that heat energy from tidal flexing might cause oceans to remain liquid and drives geological activity similar to plate tectonics on Earth.
+Europa is the sixth closest moon of the planet Jupiter, and one of the largest moons in the solar system. Europa is slightly smaller than the Earth's moon and has a tenuous atmosphere composed primarily of oxygen. The surface of Europa is composed of water and it is one of the smoothest in the solar system. Scientists suggest that it is possible Europa has an ocean of liquid water beneath it's surface, making it a strong candidate for extra-terrestrial life. It is also predicted that heat energy from tidal flexing might cause oceans to remain liquid and drives geological activity similar to plate tectonics on Earth.
 <p>After reading the text answer the following question</p>
 <div class="container">
   <form action="#" method="post">

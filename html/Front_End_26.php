@@ -26,7 +26,7 @@ padding: 50px;
   <form action="#" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="quest26" font="bold"style="font-size:20px; width: 100px, height:40px;">How does this statement relate to you</label>
+        <label for="quest26" font="bold"style="font-size:20px; width: 100px, height:40px;">How does this statement relate to you?</label>
       </div>
       <div class="col-75">
         <select id="quest26" name="q26" font="bold"style="font-size:20px; width: 100px, height:40px;">
