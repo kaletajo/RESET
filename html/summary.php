@@ -157,12 +157,6 @@ $totals = array($anxiety_score, $depression_score, $psychotic_score);
 
 $totals = calculateScores($numberOfQuestions, $answers, $points, $totals);
 
-
-#echo "---------------------------------" . "\xA";
-#echo "anxiety score = " . $totals[0] . "\xA";
-#echo "depression score = " . $totals[1] . "\xA";
-#echo "psychosis score = " . $totals[2] . "\xA";
-
 ?>
 
 
@@ -238,13 +232,14 @@ echo "<b>Session completed: " . date("Y-m-d") .  " " . date("h:i:sa") . "</b>";
 
 <!-- Logout and finish -->
 <?php
+
     // remove all session variables
-//    session_unset(); 
+    session_unset(); 
 
     // destroy the session 
-//    session_destroy(); 
+    session_destroy(); 
 
-    //header("location: index.php");
+    header("location: index.php");
 ?>
 
 
