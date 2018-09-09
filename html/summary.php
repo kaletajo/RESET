@@ -129,7 +129,7 @@ function calculateScores($numberOfQuestions,$answers, $points, $totals) {
                 $totals = parseInteractivePointsStr($userAnswer, $totals);
             }
             elseif ($pointsStr == NULL) {     // Must be multi-choice question
-                // echo "pointsStr is NULL" . "\xA";
+                //echo "pointsStr is NULL" . "\xA";
             }
             else {
                 $totals = parsePointsStr($pointsStr, $totals);
@@ -239,7 +239,6 @@ echo "<b>Session completed: " . date("Y-m-d") .  " " . date("h:i:sa") . "</b>";
     // destroy the session 
     session_destroy(); 
 
-    header("location: index.php");
 ?>
 
 
