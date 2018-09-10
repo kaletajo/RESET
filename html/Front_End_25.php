@@ -10,7 +10,7 @@
 <div class ="container"> 
 <body>
 <h1>Question 25</h1>
-<h2>I have felt panicked and overhelmed by things in my life</h2>
+<h2>I have felt panicked and overwhelmed by things in my life</h2>
 <style>
 body {
     background-color:#90EE90
